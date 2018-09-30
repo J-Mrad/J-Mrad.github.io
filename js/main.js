@@ -100,7 +100,7 @@ function BGSwitcher(){
 		HeaderBG = 2;
 	}
 	else{
-		document.getElementById("HeaderBG").src = "images/BGwide.jpg";
+		document.getElementById("HeaderBG").src = "images/BGwide.png";
 		HeaderBG = 1;
 	}	
 }
