@@ -6,7 +6,7 @@
 	Color Scheme: https://www.colorcombos.com/color-schemes/141/ColorCombo141.html
 	
 	Main Blue Drk: #618AFE
-	Main Blue Lght: #ADD8E6 
+	Main Blue Lght: #00C5FF 
 	
 	Dark Gray: #565656
 	Mid Gray: #989898
@@ -28,11 +28,11 @@
 	
 /* Basics */
 
-.testClass{ /* give to wrapper elements to see what space they take up     */
+.testClass{ /* give to wrapper elements to see what space they take up */
 	background-color: #FFFFFF;
 }
 body{
-	background-color:#ADD8E6;
+	background-color:#00C5FF;
 	overflow-x: hidden;
 }
 .fixflow{
@@ -73,6 +73,10 @@ img{
 .margins-center{
 	display: block;
 	margin:	0 auto;
+}
+
+.margin-top{
+	margin-top: 50px;
 }
 
 /* Mobile Padding */
@@ -121,6 +125,9 @@ img{
 .bgBlue{
 	background-color:#618AFE;
 }
+.bgLightBlue{
+	background-color:#00C5FF;
+}
 
 .hoverBlue, .hoverWhite{
 	transition: 1s all;
@@ -158,7 +165,7 @@ img{
 }
 .nav-link:hover{
 	background: #E1E1D6;
-	color: #ADD8E6;
+	color: #00C5FF;
 }
 .navbar-collapse{
 	justify-content: flex-end;
