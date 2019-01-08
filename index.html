@@ -23,7 +23,6 @@
   
     <!-- jQuery & JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>		<!-- JQuerry -->
-	<script src="js/JQslider.js" type="text/javascript"></script>								<!-- Slider -->
 																																	<!-- Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -45,10 +44,10 @@
 					<a data-scroll class="nav-link" href="#about">About</a>
 				</li>  
 				<li class="nav-item">
-				<a data-scroll class="nav-link" href="#education">3rd Year</a>    
+				<a data-scroll class="nav-link" href="#3rd">3rd Year</a>    
 				</li>
 				<li class="nav-item"> 
-					<a data-scroll class="nav-link" href="#skills">2nd Year</a>         
+					<a data-scroll class="nav-link" href="#2nd"> <s>2nd Year</s> </a>         
 				</li>
 			</ul> 
 		</div>
@@ -56,30 +55,29 @@
 	
 	
 	<!-- Header -->
-	
-	<header class="header">	
+	<div class = "row">
+	<header class="header" id = "about">	
 		<img src ="images/BGwide.png" onClick = BGSwitcher() alt = "Header Background" id = "HeaderBG">
 	</header>
-	
+	</div>
 	<!-- About -->
-	<div class="container-fluid fixflow">
-	
+	<!-- div class="container-fluid fixflow" -->
+
 		<div class = "row bgWhite">
 			<div class="col-12">
-				<h1 class="text-center "> About </h1>
+				<h1 class="text-center"> About </h1>
 			</div>
 		</div>	
 
 				<div class = "row bgWhite">
-			<div class="col-12">
-				<h4 class="text-center"> Disclaimer Disclaimer Disclaimer Disclaimer Disclaimer
+			<div class="col-12"> 
 				 Disclaimer Disclaimer Disclaimer Disclaimer Disclaimer Disclaimer Disclaimer Disclaimer
 				  Disclaimer Disclaimer Disclaimer Disclaimer Disclaimer Disclaimer Disclaimer Disclaimer Disclaimer
 				   Disclaimer Disclaimer Disclaimer Disclaimer Disclaimer Disclaimer Disclaimer </h1>
 			</div>
 		</div>		
 
-		<div class = "row">
+		<div class = "row" id = "3rd">
 				<div class = "col-4 bgBlue"> 
 				</div>
 				
@@ -96,24 +94,48 @@
 
 		<div class = "row">
 
-				<div class = "col-3 bgMidGray"> 
+				<div class = "col-sm-12 col-md-6 col-lg-3 bgMidGray"> 
+					<img class="icon-md" src ="icons/prog.png">
 					<h2 class="text-center">[I3301]</h2>
 					<h5 class="text-center">Software Engineering</h5>
-					<button class="CustomButton1 margins-center"> Download Course </button>
-					<button class="CustomButton1 margins-center"> Download Summary </button>
-					<button class="CustomButton2 margins-center"> Download Full </button>
+					<br>
+					<button class="CustomButton1 margins-center" onClick = download('data/I3301/Course.rar')> Download Course </button>
+					<button class="CustomButton1 margins-center" onClick = download('data/I3301/Summary.rar')> Download Summary </button>
+					<button class="CustomButton1 margins-center" onClick = download('data/I3301/I3301.rar')> Download Full </button>
+					<br>
+					<h1 class="text-white">.</h1>
 				</div>
-				<div class = "col-3 bgMidGray"> 
+				<div class = "col-sm-12 col-md-6 col-lg-3 bgMidGray"> 
+					<img class="icon-md" src ="icons/Web.png">
 					<h2 class="text-center">[I3302]</h2>
 					<h5 class="text-center">PHP</h5>
+					<br>
+					<s><button class="CustomButton1 margins-center"> Download Course </button>
+					<button class="CustomButton1 margins-center"> Download Summary </button>
+					<button class="CustomButton1 margins-center"> Download Full </button>
+					</s><br>
+					<h1 class="text-white">.</h1>
 				</div>
-				<div class = "col-3 bgLightGray">
-					<h2 class="text-center">[I3304]</h2> 
+				<div class = "col-sm-12 col-md-6 col-lg-3 bgLightGray">
+					<img class="icon-md" src ="icons/NW.png">
+					<h2 class="text-center">[I3304]</h2>
 					<h5 class="text-center">Networking</h5>
+					<br>
+					<s><button class="CustomButton1 margins-center"> Download Course </button>
+					<button class="CustomButton1 margins-center"> Download Summary </button>
+					<button class="CustomButton1 margins-center"> Download Full </button>
+					</s><br>
+					<h1 class="text-white">.</h1>
 				</div>
-				<div class = "col-3 bgDarkGray">
+				<div class = "col-sm-12 col-md-6 col-lg-3 bgDarkGray">
+					<img class="icon-md" src ="icons/Mobile.png">
 					<h2 class="text-center">[I3350]</h2>
 					<h5 class="text-center">Mobile Applications Development</h5>
+					<s><button class="CustomButton1 margins-center"> Download Course </button>
+					<button class="CustomButton1 margins-center"> Download Summary </button>
+					<button class="CustomButton1 margins-center"> Download Full </button>
+					</s><br>
+					<h1 class="text-white">.</h1>
 				</div>
 
 		</div>
@@ -142,7 +164,7 @@
 		</div>
 		
 		
-	</div>	
+	<!-- /div -->	
 
 	<!-- Smooth scrolling & Fade initializer-->
 	<script>

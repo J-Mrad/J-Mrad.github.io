@@ -39,8 +39,29 @@ body{
 	overflow-x: hidden;
 }
 
+
+/* Images */
+
 img{
 	max-width: 100%;
+}
+
+.icon-sm{
+	margin-top:50px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width:50%;
+}
+
+
+.icon-md{
+	margin-top:50px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width:70%;
+	max-height:22%;
 }
 
 /* Padding */
@@ -69,14 +90,12 @@ img{
 .padded-down{
 	padding: 0 0 10px 0; 
 }
+
 /* margins */
+
 .margins-center{
 	display: block;
 	margin:	0 auto;
-}
-
-.margin-top{
-	margin-top: 50px;
 }
 
 /* Mobile Padding */
@@ -107,6 +126,13 @@ img{
 .text-right{
 	text-align: right;
 }
+
+/* text color */
+
+.text-white{
+	color:#FFFFFF;
+}
+
 
 /* Backgrounds */
 
@@ -142,6 +168,7 @@ img{
 .right-side-line{
 	border-right: 1px solid #ccc;
 }
+
 /* Navigation bar */
 
 #TopLeftLogo{width: 100px;}
@@ -210,17 +237,6 @@ img{
     box-shadow: 0 0 2px 1px #618AFE;
 }
 
-.CustomButton1{
-	background-color: #618AFE;
-	transition: 1s all ease;
-}
-
-.CustomButton1:hover{
-	background-color: #FFFFFF;
-	transform: scale(1.5);
-	box-shadow: 0px 1px 0px 0px;
-}
-
 .SendEmail{
 	color: blue;
 	cursor:pointer;
@@ -232,9 +248,7 @@ img{
 }
 
 @media only screen and (max-width: 763px){
-	.CustomButton1{
-		max-width: 80%;
-	}
+
 	.hideMobile{
 		visibility: hidden;
 	}
@@ -243,118 +257,8 @@ img{
 	}
 }
 
-/* Education */
-
-.education-col{
-	text-align: center;
-}
-.education-col-interior{
-	padding: 10%;
-}
-
-.EduDropDown, .EduDropDown2{
-	cursor:pointer;
-}
-
-.Educationslider, .Educationslider2{
-	width: 100%;
-	display: none;
-}
-.Educationslider img, .Educationslider2 img{
-	margin: 0 auto;
-	display: block;
-}
-
-.dropdown-icon{
-	max-width: 14%;
-	position:absolute;
-	bottom: 10px;
-	left:43%;
-	right:43%;
-}
-
-
-/* Slideshow */
-	 /*jssor slider loading skin spin css*/
-	.jssorl-009-spin img {
-		animation-name: jssorl-009-spin;
-		animation-duration: 1.6s;
-		animation-iteration-count: infinite;
-		animation-timing-function: linear;
-	}
-
-	@keyframes jssorl-009-spin {
-		from { transform: rotate(0deg); }
-		to { transform: rotate(360deg); }
-	}
-
-	/*jssor slider bullet skin 051 css*/
-	.jssorb051 .i {position:absolute;cursor:pointer;}
-	.jssorb051 .i .b {fill:#fff;fill-opacity:0.5;}
-	.jssorb051 .i:hover .b {fill-opacity:.7;}
-	.jssorb051 .iav .b {fill-opacity: 1;}
-	.jssorb051 .i.idn {opacity:.3;}
-
-	/*jssor slider arrow skin 051 css*/
-	.jssora051 {display:block;position:absolute;cursor:pointer;}
-	.jssora051 .a {fill:none;stroke:#fff;stroke-width:360;stroke-miterlimit:10;}
-	.jssora051:hover {opacity:.8;}
-	.jssora051.jssora051dn {opacity:.5;}
-	.jssora051.jssora051ds {opacity:.3;pointer-events:none;}
-	
-	#jssor_1{
-		position:relative;
-		margin:0 auto;
-		top:0px;left:-14px;
-		width:980px;
-		height:380px;
-		overflow:hidden;
-		
-	}	
-	.jssorl-009-spin{
-		position:absolute;
-		top:0px;
-		left:0px;
-		width:100%;
-		height:100%;
-		text-align:center;
-		background-color:rgba(0,0,0,0.7);
-	}
-	.jsslies{
-	cursor:default;
-	position:relative;
-	top:0px;
-	left:-10px;
-	padding: 0;
-	width:980px;
-	height:380px;
-	overflow:hidden;
-	}
-	.jssorb051{
-	position:absolute;
-	bottom:12px;
-	right:12px;
-	}
-	.jssora051{
-	width:55px;
-	height:55px;
-	top:0px;
-	}
-	
-/* Skills */
-
-.force-small{
-	max-width: 300px;
-}
-.inner-text-skills{
-	position: absolute;
-    bottom: 20px;
-	left:25%;
-	right:25%;
-	font-family: Oswald;
-}
-
 /* Footer */
+
 .force-icon{
 	padding-top: 15px;
 	max-width: 15%;
@@ -374,69 +278,34 @@ img{
 	text-align:center;
 }
 
-/* Comments Section */
+/* Buttons */
 
-.name{
-	height: 20%;
-	padding: 50px 0;
+.CustomButton1{
+	background-color: #618AFE;
+	transition: 1s all ease;
 }
-.forum{
-	width: 30%;
-	margin-left: auto; margin-right: auto;
-}
-.commentSection{
-	width: 30%;
-	margin-left: auto; margin-right: auto;
-	background-color: #DBDBCE;
 
-}
-@media only screen and (max-width: 763px){
-	.forum , .commentSection, #CommentIn{
-		width: 90%;
-	
-	}
-
-
-
+.CustomButton1:hover{
+	background-color: #FFFFFF;
+	transform: scale(1.5);
+	box-shadow: 0px 1px 0px 0px;
 }
 
 .CustomButton2{
 	background-color: #618AFE;
 	transition: 1s all ease;
 	padding: 10px 20px;
+	margin-bottom: 30px;
 }
 
 .CustomButton2:hover{
 	background-color: #FFFFFF;
-	transform: scale(1.5);
+	transform: scale(1.1);
 	box-shadow: 0px 1px 0px 0px;
 }
 
-.comment1{
-	background-color:#DBDBCE;
-}
-
-.comment2{
-	background-color:#989898;
-}
-.commenterName{
-	color: blue;
-}
-
-/* Contact Form */
-.container 
-{
-    height: 100%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #618AFE;    
-}
-.container-box
-{
-	display:inline-block; 
-	padding:120px; 
-    background-color: #618AFE;    
-	border: 1px solid #FFF;	
+@media only screen and (max-width: 763px){
+	.CustomButton1{
+		max-width: 80%;
+	}
 }
