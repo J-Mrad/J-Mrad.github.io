@@ -23,13 +23,16 @@
   
     <!-- jQuery & JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>		<!-- JQuerry -->
-																																	<!-- Bootstrap -->
+																								<!-- Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>			<!-- Smooth Scroll -->
+																								<!-- Smooth Scroll -->
+	<script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@14/dist/smooth-scroll.polyfills.min.js"></script>
 	<script type="text/javascript" src='js/main.js'></script>									<!-- Main -->
 	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>								<!-- Fading Animations -->
-
+	<script type="text/javascript" src="js/jszip.js"></script>							<!-- Zipping files -->
+	<script type="text/javascript" src="js/jszip-utils.js"></script>
+	
 	<!-- Navigation -->
 	<nav class="navbar navbar-expand-lg fixed-top ">  
 		<a class="navbar-brand" href="#">
@@ -44,7 +47,7 @@
 					<a data-scroll class="nav-link" href="#about">About</a>
 				</li>  
 				<li class="nav-item">
-				<a data-scroll class="nav-link" href="#3rd">3rd Year</a>    
+				<a data-scroll class="nav-link" href="#3rd">3rd Year</a>
 				</li>
 				<li class="nav-item"> 
 					<a data-scroll class="nav-link" href="#2nd"> <s>2nd Year</s> </a>         
@@ -99,12 +102,97 @@
 					<h2 class="text-center">[I3301]</h2>
 					<h5 class="text-center">Software Engineering</h5>
 					<br>
-					<button class="CustomButton1 margins-center" onClick = download('data/I3301/Course.rar')> Download Course </button>
-					<button class="CustomButton1 margins-center" onClick = download('data/I3301/Summary.rar')> Download Summary </button>
-					<button class="CustomButton1 margins-center" onClick = download('data/I3301/I3301.rar')> Download Full </button>
+
+					<ul>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301.1" onclick="refresh('i3301');"/>
+				                Ch1 - Introduction
+				            </label>
+				        </li>
+ 				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301.2" onclick="refresh('i3301');"/>
+				                Ch2 - Software Processes
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301.3" onclick="refresh('i3301');"/>
+				                Ch3 - Agile
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301.4" onclick="refresh('i3301');"/>
+				                Ch4A - Requirements Engineering
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301.5" onclick="refresh('i3301');"/>
+				                Ch4B - Requirements Gathering
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301.6" onclick="refresh('i3301');"/>
+				                Ch5A - Git Basic Commands
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301.7" onclick="refresh('i3301');"/>
+				                Ch5B - Git Cheat Sheet
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301.8" onclick="refresh('i3301');"/>
+				                Ch6A - UML1 - Use Case Diagram
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301.9" onclick="refresh('i3301');"/>
+				                Ch6B - UML2 - Class Diagram
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301.10" onclick="refresh('i3301');"/>
+				                Ch6C - UML3 - Sequence & State Diagrams
+				            </label>
+				        </li>
+	   				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301.11" onclick="refresh('i3301');"/>
+				                Ch6D - UML3 - Sequence Diagrams
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301.12" onclick="refresh('i3301');"/>
+				                Ch6E - UML3 - State Diagrams
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301.13" onclick="refresh('i3301');"/>
+				                Ch7 - Testing
+				            </label>
+				        </li>
+				    </ul>
+				    	<!-- download('data/I3301/Course.rar') -->
+					<button class="CustomButton1 margins-center" id = 'i3301course' onClick = downloadnew('i3301',0)> Download Course (0KB) </button> 
+					<button class="CustomButton1 margins-center" id = 'i3301summary' onClick = download('data/I3301/Summary.rar')> Download Summary (0KB) </button>
+					<button class="CustomButton1 margins-center" id = 'i3301both' onClick = download('data/I3301/I3301.rar')> Download Both (0KB) </button>
 					<br>
+
 					<h1 class="text-white">.</h1>
 				</div>
+
+
 				<div class = "col-sm-12 col-md-6 col-lg-3 bgMidGray"> 
 					<img class="icon-md" src ="icons/Web.png">
 					<h2 class="text-center">[I3302]</h2>
