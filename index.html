@@ -185,7 +185,7 @@
 				            </label>
 				        </li>
 				    </ul>
-				    	<!-- download('data/I3301/Course.rar') -->
+
 					<button class="CustomButton1 margins-center" id = 'i3301course' onClick = downloadnew('i3301',0)> Download Course (0KB) </button> 
 					<button class="CustomButton1 margins-center" id = 'i3301summary' onClick = downloadnew('i3301',1)> Download Summary (0KB) </button>
 					<button class="CustomButton1 margins-center" id = 'i3301both' onClick = downloadnew('i3301',2)> Download Both (0KB) </button>
@@ -211,10 +211,46 @@
 					<h2 class="text-center">[I3304]</h2>
 					<h5 class="text-center">Networking</h5>
 					<br>
-					<s><button class="CustomButton1 margins-center"> Download Course </button>
-					<button class="CustomButton1 margins-center"> Download Summary </button>
-					<button class="CustomButton1 margins-center"> Download Full </button>
-					</s><br>
+
+					<ul>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3304.1" onclick="refresh('i3304');"/>
+				                Ch1 - Transport Layer
+				            </label>
+				        </li>
+ 				        <li>
+				            <label>
+				                <input type="checkbox" id="i3304.2" onclick="refresh('i3304');"/>
+				                Ch2 - Routing Algorithms
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3304.3" onclick="refresh('i3304');"/>
+				                Ch3 - HTTP FTP TELNET
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3304.4" onclick="refresh('i3304');"/>
+				                Ch4 - Mail & DNS
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3304.5" onclick="refresh('i3304');"/>
+				                Ch5 - Security
+				            </label>
+				        </li>
+
+				    </ul>
+
+					<button class="CustomButton1 margins-center" id = 'i3304course' onClick = downloadnew('i3304',0)> Download Course (0KB) </button> 
+					<s><button class="CustomButton1 margins-center" id = 'i3304summary' onClick = downloadnew('i3304',1)> Download Summary (0KB) </button>
+					<button class="CustomButton1 margins-center" id = 'i3304both' onClick = downloadnew('i3304',2)> Download Both (0KB) </button>
+					</s>	
+					<br>
 					<h1 class="text-white">.</h1>
 				</div>
 				<div class = "col-sm-12 col-md-6 col-lg-3 bgDarkGray">

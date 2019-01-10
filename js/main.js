@@ -64,6 +64,17 @@ function refresh(course){
 		  		}
 		  	}
 	  	}
+	  	else if(course==='i3304'){
+			courseSet = [1576,1423,2755,2301,1252];
+			sumSet = [0,0,0,0,0];
+			
+			for(i = 1 ; i < 6 ; i++){	
+			  	if (document.getElementById(course+'.'+i).checked){
+			  		sumSize += sumSet[i-1];
+			  		courseSize += courseSet[i-1];
+		  		}
+		  	}
+	  	}
 
 		document.getElementById(course+'course').innerHTML = "Download course ("+courseSize+"KB)";
 		document.getElementById(course+'summary').innerHTML = "Download summary ("+sumSize+"KB)";
@@ -99,15 +110,25 @@ function urlToPromise(url) {
 function downloadnew(course, status){
 
     var zip = new JSZip();
-    if(course==='i3301'){
 
-			courseSet = ['data/I3301/Courses/ch1.pptx',
-			'data/I3301/Courses/ch2.pptx',
-			'data/I3301/Courses/ch3.pptx',
-			'data/I3301/Courses/ch4a.ppt','data/I3301/Courses/ch4b.pptx',
-			'data/I3301/Courses/ch5a.pdf','data/I3301/Courses/ch5b.pdf',
-			'data/I3301/Courses/ch6a.pptx','data/I3301/Courses/ch6b.ppt','data/I3301/Courses/ch6c.ppt','data/I3301/Courses/ch6d.pdf','data/I3301/Courses/ch6e.pdf',
-			'data/I3301/Courses/ch7.pptx'];
+
+
+
+    if(course==='i3301'){ //Software Engineering
+
+			courseSet = ['data/I3301/Courses/Ch1_Introduction.pptx',
+			'data/I3301/Courses/Ch2_Software_Processes.pptx',
+			'data/I3301/Courses/Ch3_Agile.pptx',
+			'data/I3301/Courses/Ch4A_Requirements_Gathering.ppt',
+			'data/I3301/Courses/Ch4B_Requirements_Engineering.pptx',
+			'data/I3301/Courses/Ch5A_Git_Basic_Commands.pdf',
+			'data/I3301/Courses/Ch5B_Git_Cheat_Sheet.pdf',
+			'data/I3301/Courses/Ch6A_UML_Use_Case.pptx',
+			'data/I3301/Courses/Ch6B_UML_Class.ppt',
+			'data/I3301/Courses/Ch6C_UML_Sequence_State.ppt',
+			'data/I3301/Courses/Ch6D_UML_Sequence.pdf',
+			'data/I3301/Courses/Ch6E_UML_State.pdf',
+			'data/I3301/Courses/Ch7_Testing.pptx'];
 			sumSet = ['data/I3301/Summaries/ch1.docx',
 			'data/I3301/Summaries/ch2.docx',
 			'data/I3301/Summaries/ch3.docx',
@@ -143,6 +164,10 @@ function downloadnew(course, status){
 
 	  		}
 	  	}
+
+
+
+
 
 	  	if(status == 0){
 	  		zip.remove("Summaries");
