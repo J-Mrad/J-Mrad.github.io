@@ -147,7 +147,7 @@ function downloadnew(course, status){
 	  	zip.generateAsync({type:"blob"})
 		.then(function(content) {
     		// see FileSaver.js
-   	 		saveAs(content, "example.zip");
+   	 		saveAs(content, course+".zip");
 		});
  	}
 
