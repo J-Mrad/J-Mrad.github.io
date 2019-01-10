@@ -66,11 +66,14 @@ function refresh(course){
 	  	}
 	  	else if(course==='i3304'){
 			courseSet = [1576,1423,2755,2301,1252];
-			sumSet = [0,0,0,0,0];
-			
+
+			sumFlag = 0;
 			for(i = 1 ; i < 6 ; i++){	
 			  	if (document.getElementById(course+'.'+i).checked){
-			  		sumSize += sumSet[i-1];
+			  		if(sumFlag != 0){
+			  			sumFlag = 0;
+			  			sumSize = 15,847;
+			  		}
 			  		courseSize += courseSet[i-1];
 		  		}
 		  	}
@@ -164,24 +167,41 @@ function downloadnew(course, status){
 
 	  		}
 	  	}
+	}
+
+	else if(course==='i3304'){ //Networking
+
+			courseSet = ['data/I3304/Courses/Ch1_Transport_Layer.pdf',
+			'data/I3304/Courses/Ch2_Routing_Algorithm.pdf',
+			'data/I3304/Courses/Ch3_HTTP_FTP_TELNET.pdf',
+			'data/I3304/Courses/Ch4_Mail_DNS.pdf',
+			'data/I3304/Courses/Ch5_Security.pdf'];
+			
+    	for(i = 1 ; i < 6 ; i++){
+		  	if (document.getElementById(course+'.'+i).checked){
+		  		zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
+			}
+		}
+		for(i=1 ; i < 9 ; i++){
+			zip.folder("Summaries").file("i3304_"+i+".jpg", urlToPromise("data/I3304/Summaries/p"+i+".jpg"), {binary:true});
+		}
+	}
 
 
 
+  	if(status == 0){
+  		zip.remove("Summaries");
+  	}
+  	else if(status == 1){
+  		zip.remove("Courses");
+  	}
 
-
-	  	if(status == 0){
-	  		zip.remove("Summaries");
-	  	}
-	  	else if(status == 1){
-	  		zip.remove("Courses");
-	  	}
-
-	  	zip.generateAsync({type:"blob"})
-		.then(function(content) {
-    		// see FileSaver.js
-   	 		saveAs(content, course+".zip");
-		});
- 	}
+  	zip.generateAsync({type:"blob"})
+	.then(function(content) {
+		// see FileSaver.js
+ 		saveAs(content, course+".zip");
+	});
+ 	
 
 
 }
