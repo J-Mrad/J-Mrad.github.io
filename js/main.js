@@ -104,9 +104,9 @@ function downloadnew(course, status){
 			courseSet = ['data/I3301/Courses/ch1.pptx',
 			'data/I3301/Courses/ch2.pptx',
 			'data/I3301/Courses/ch3.pptx',
-			'data/I3301/Courses/ch4a.pptx','data/I3301/Courses/ch4b.pptx',
+			'data/I3301/Courses/ch4a.ppt','data/I3301/Courses/ch4b.pptx',
 			'data/I3301/Courses/ch5a.pdf','data/I3301/Courses/ch5b.pdf',
-			'data/I3301/Courses/ch6a.pptx','data/I3301/Courses/ch6b.pptx','data/I3301/Courses/ch6c.pptx','data/I3301/Courses/ch6d.pdf','data/I3301/Courses/ch6e.pdf',
+			'data/I3301/Courses/ch6a.pptx','data/I3301/Courses/ch6b.ppt','data/I3301/Courses/ch6c.ppt','data/I3301/Courses/ch6d.pdf','data/I3301/Courses/ch6e.pdf',
 			'data/I3301/Courses/ch7.pptx'];
 			sumSet = ['data/I3301/Summaries/ch1.docx',
 			'data/I3301/Summaries/ch2.docx',
