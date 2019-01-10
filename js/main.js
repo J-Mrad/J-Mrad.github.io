@@ -101,22 +101,22 @@ function downloadnew(course, status){
     var zip = new JSZip();
     if(course==='i3301'){
 
-			courseSet = ['data/I3301/Courses/ch1',
-			'data/I3301/Courses/ch2',
-			'data/I3301/Courses/ch3',
-			'data/I3301/Courses/ch4a','data/I3301/Courses/ch4b',
-			'data/I3301/Courses/ch5a','data/I3301/Courses/ch5b',
-			'data/I3301/Courses/ch6a','data/I3301/Courses/ch6b','data/I3301/Courses/ch6c','data/I3301/Courses/ch6d','data/I3301/Courses/ch6e',
-			'data/I3301/Courses/ch7'];
-			sumSet = ['data/I3301/Summaries/ch1',
-			'data/I3301/Summaries/ch2',
-			'data/I3301/Summaries/ch3',
-			'data/I3301/Summaries/ch4',
-			'data/I3301/Summaries/git',null,
-			'data/I3301/Summaries/uml1',
-			'data/I3301/Summaries/uml2',
-			'data/I3301/Summaries/uml3',null,null,null,
-			'data/I3301/Summaries/ch7'];
+			courseSet = ['data/I3301/Courses/ch1.pptx',
+			'data/I3301/Courses/ch2.pptx',
+			'data/I3301/Courses/ch3.pptx',
+			'data/I3301/Courses/ch4a.pptx','data/I3301/Courses/ch4b.pptx',
+			'data/I3301/Courses/ch5a.pdf','data/I3301/Courses/ch5b.pdf',
+			'data/I3301/Courses/ch6a.pptx','data/I3301/Courses/ch6b.pptx','data/I3301/Courses/ch6c.pptx','data/I3301/Courses/ch6d.pdf','data/I3301/Courses/ch6e.pdf',
+			'data/I3301/Courses/ch7.pptx'];
+			sumSet = ['data/I3301/Summaries/ch1.docx',
+			'data/I3301/Summaries/ch2.docx',
+			'data/I3301/Summaries/ch3.docx',
+			'data/I3301/Summaries/ch4.docx',
+			'data/I3301/Summaries/git.docx',null,
+			'data/I3301/Summaries/uml1.docx',
+			'data/I3301/Summaries/uml2.docx',
+			'data/I3301/Summaries/uml3.docx',null,null,null,
+			'data/I3301/Summaries/ch7.docx'];
 			
 			gitFlag = 0;
 			uml3Flag=0;
