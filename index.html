@@ -83,15 +83,16 @@
 		</div>		
 
 		<div class = "row" id = "3rd">
-				<div class = "col-4 bgBlue"> 
+				<div class = "col-sm-12 col-lg-4 bgBlue"> 
 				</div>
 				
-				<div class = "col-4 bgBlue"> 
-					<img src="images/Skills.png" class="padded-low">
+				<div class = "col-sm-12 col-lg-4 bgBlue"> 
+					<img src="images/Skills.png" class="padded-up icon-md-single">
 					<h1 class="text-center"> 3rd Year Summaries </h1>
+					<h6 class="text-center text-white"> */**: Courses share the same summary file </h6>
 				</div>
 				
-				<div class = "col-4 bgBlue"> 
+				<div class = "col-sm-12 col-lg-4 bgBlue"> 
 				
 				</div>
 		</div>
@@ -104,84 +105,89 @@
 					<h2 class="text-center">[I3301]</h2>
 					<h5 class="text-center">Software Engineering</h5>
 					<br>
-
-					<ul>
+					<ul style="font-size:14px">
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3301checkAll" onclick="toggleAll('i3301',13);"/>
+				                <strong> Select All </strong>
+				            </label>
+				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.1" onclick="refresh('i3301');"/>
-				                Ch1 - Introduction
+				                <strong>Ch1 -  </strong> Introduction
 				            </label>
 				        </li>
  				        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.2" onclick="refresh('i3301');"/>
-				                Ch2 - Software Processes
+				                <strong>Ch2 -  </strong> Software Processes
 				            </label>
 				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.3" onclick="refresh('i3301');"/>
-				                Ch3 - Agile
+				                <strong>Ch3 -  </strong> Agile
 				            </label>
 				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.4" onclick="refresh('i3301');"/>
-				                Ch4A - Requirements Engineering
+				                <strong>Ch4A - </strong>  Requirements Engineering
 				            </label>
 				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.5" onclick="refresh('i3301');"/>
-				                Ch4B - Requirements Gathering
+				                <strong>Ch4B - </strong>  Requirements Gathering
 				            </label>
 				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.6" onclick="refresh('i3301');"/>
-				                Ch5A - Git Basic Commands*
+				                <strong>Ch5A - </strong>  Git Basic Commands*
 				            </label>
 				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.7" onclick="refresh('i3301');"/>
-				                Ch5B - Git Cheat Sheet*
+				                <strong>Ch5B - </strong>  Git Cheat Sheet*
 				            </label>
 				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.8" onclick="refresh('i3301');"/>
-				                Ch6A - UML1 - Use Case Diagram
+				                <strong>Ch6A - </strong>  UML1 - Use Case Diagram
 				            </label>
 				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.9" onclick="refresh('i3301');"/>
-				                Ch6B - UML2 - Class Diagram
+				                <strong>Ch6B - </strong>  UML2 - Class Diagram
 				            </label>
 				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.10" onclick="refresh('i3301');"/>
-				                Ch6C - UML3 - Sequence & State Diagrams**
+				                <strong>Ch6C - </strong>  UML3 - Sequence & State Diagrams**
 				            </label>
 				        </li>
 	   				        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.11" onclick="refresh('i3301');"/>
-				                Ch6D - UML3 - Sequence Diagrams**
+				                <strong>Ch6D - </strong>  UML3 - Sequence Diagrams**
 				            </label>
 				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.12" onclick="refresh('i3301');"/>
-				                Ch6E - UML3 - State Diagrams**
+				                <strong>Ch6E - </strong>  UML3 - State Diagrams**
 				            </label>
 				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.13" onclick="refresh('i3301');"/>
-				                Ch7 - Testing
+				                <strong>Ch7 -  </strong> Testing
 				            </label>
 				        </li>
 				    </ul>
@@ -191,7 +197,6 @@
 					<button class="CustomButton1 margins-center" id = 'i3301both' onClick = downloadnew('i3301',2)> Download Both (0KB) </button>
 					<br>
 					<h6 class="text-white">*/**: Courses share the same summary file</h6>
-					<h1 class="text-white">.</h1>
 				</div>
 
 
@@ -204,43 +209,60 @@
 					<button class="CustomButton1 margins-center"> Download Summary </button>
 					<button class="CustomButton1 margins-center"> Download Full </button>
 					</s><br>
-					<h1 class="text-white">.</h1>
 				</div>
+
+				<div class = "col-sm-12 col-md-6 col-lg-3 bgDarkGray">
+					<img class="icon-md" src ="icons/OS.gif">
+					<h2 class="text-center">[I3303]</h2>
+					<h5 class="text-center">Operating Systems 2</h5>
+					<br>
+					<s><button class="CustomButton1 margins-center"> Download Course </button>
+					<button class="CustomButton1 margins-center"> Download Summary </button>
+					<button class="CustomButton1 margins-center"> Download Full </button>
+					</s><br>
+				</div>
+
 				<div class = "col-sm-12 col-md-6 col-lg-3 bgLightGray">
 					<img class="icon-md" src ="icons/NW.png">
 					<h2 class="text-center">[I3304]</h2>
 					<h5 class="text-center">Networking</h5>
 					<br>
 
-					<ul>
+					<ul style="font-size:14px">
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3304checkAll" onclick="toggleAll('i3304',5);"/>
+				                <strong> Select All </strong>
+				            </label>
+				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3304.1" onclick="refresh('i3304');"/>
-				                Ch1 - Transport Layer
+				                <strong> Ch1 - </strong> Transport Layer*
 				            </label>
 				        </li>
  				        <li>
 				            <label>
 				                <input type="checkbox" id="i3304.2" onclick="refresh('i3304');"/>
-				                Ch2 - Routing Algorithms
+				                <strong> Ch2 - </strong> Routing Algorithms*
 				            </label>
 				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3304.3" onclick="refresh('i3304');"/>
-				                Ch3 - HTTP FTP TELNET
+				                <strong> Ch3 - </strong> HTTP FTP TELNET*
 				            </label>
 				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3304.4" onclick="refresh('i3304');"/>
-				                Ch4 - Mail & DNS
+				                <strong> Ch4 - </strong> Mail & DNS*
 				            </label>
 				        </li>
 				        <li>
 				            <label>
 				                <input type="checkbox" id="i3304.5" onclick="refresh('i3304');"/>
-				                Ch5 - Security
+				                <strong> Ch5 - </strong> Security*
 				            </label>
 				        </li>
 
@@ -250,18 +272,101 @@
 					<button class="CustomButton1 margins-center" id = 'i3304summary' onClick = downloadnew('i3304',1)> Download Summary (0KB) </button>
 					<button class="CustomButton1 margins-center" id = 'i3304both' onClick = downloadnew('i3304',2)> Download Both (0KB) </button>
 					<br>
-					<h1 class="text-white">.</h1>
 				</div>
-				<div class = "col-sm-12 col-md-6 col-lg-3 bgDarkGray">
-					<img class="icon-md" src ="icons/Mobile.png">
-					<h2 class="text-center">[I3350]</h2>
-					<h5 class="text-center">Mobile Applications Development</h5>
-					<s><button class="CustomButton1 margins-center"> Download Course </button>
-					<button class="CustomButton1 margins-center"> Download Summary </button>
-					<button class="CustomButton1 margins-center"> Download Full </button>
-					</s><br>
-					<h1 class="text-white">.</h1>
-				</div>
+
+		</div>
+
+		<div class="row">
+
+			<div class = "col-sm-12 col-md-6 col-lg-3 bgMidGray"> 
+				<img class="icon-md" src ="icons/GUI.png">
+				<h2 class="text-center">[I3305]</h2>
+				<h5 class="text-center">GUI</h5>
+				<br>
+
+					<ul style="font-size:14px">
+						<li>
+				            <label>
+				                <input type="checkbox" id="i3305checkAll" onclick="toggleAll('i3305',6);"/>
+				                <strong> Select All </strong>
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3305.1" onclick="refresh('i3305');"/>
+				                <strong> Ch1 -  </strong> Creational Patterns
+				            </label>
+				        </li>
+ 				        <li>
+				            <label>
+				                <input type="checkbox" id="i3305.2" onclick="refresh('i3305');"/>
+				                <strong> Ch2 -  </strong> Structural Patterns
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3305.3" onclick="refresh('i3305');"/>
+				                <strong> Ch3 -  </strong> Behavioral Patterns
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3305.4" onclick="refresh('i3305');"/>
+				                <strong> Ch4A - </strong>  JavaFx
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3305.5" onclick="refresh('i3305');"/>
+				                <strong> Ch4B - </strong>  SceneBuilder
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3305.6" onclick="refresh('i3305');"/>
+				                <strong> Ch5 -  </strong> JDBC
+				            </label>
+				        </li>
+
+				    </ul>
+
+				<button class="CustomButton1 margins-center" id = 'i3305course' onClick = downloadnew('i3305',0)> Download Course (0KB) </button> 
+				<button class="CustomButton1 margins-center" id = 'i3305summary' onClick = downloadnew('i3305',1)> Download Summary (0KB) </button>
+				<button class="CustomButton1 margins-center" id = 'i3305both' onClick = downloadnew('i3305',2)> Download Both (0KB) </button>
+				<br>
+			</div>
+
+			<div class = "col-sm-12 col-md-6 col-lg-3 bgDarkGray"> 
+				<img class="icon-md" src ="icons/DB.png">
+				<h2 class="text-center">[I3306]</h2>
+				<h5 class="text-center">Database 2</h5>
+				<br>
+				<ul>
+			        <li>
+			            <label style="font-size:14px">
+			                <input type="checkbox" id="i3306.1" onclick="refresh('i3306');"/>
+			                <strong> Summary </strong>  Yes this is the entire course
+			            </label>
+			        </li>
+			    </ul>
+				<button class="CustomButton1 margins-center" id = 'i3306summary' onClick = downloadnew('i3306',2)> Download Summary (0KB) </button>
+				<br>
+			</div>
+
+			<div class = "col-sm-12 col-md-6 col-lg-3 bgLightGray">
+				<img class="icon-md" src ="icons/Mobile.png">
+				<h2 class="text-center">[I3350]</h2>
+				<h5 class="text-center">Mobile Applications Development</h5>
+				<br>
+				<s><button class="CustomButton1 margins-center"> Download Course </button>
+				<button class="CustomButton1 margins-center"> Download Summary </button>
+				<button class="CustomButton1 margins-center"> Download Full </button>
+				</s><br>
+			</div>
+
+			<div class = "col-sm-12 col-md-6 col-lg-3 bgMidGray">
+			
+			</div>
 
 		</div>
 

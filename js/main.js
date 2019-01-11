@@ -29,60 +29,106 @@ function download(file){
 
 
 
+function toggleAll(course,count){
+	if(document.getElementById(course+"checkAll").checked){
+		for(i = 1 ; i <= count ; i++){
+		  	document.getElementById(course+'.'+i).checked = true;
+		}
+	}
+	else{
+		for(i = 1 ; i <= count ; i++){
+	  		document.getElementById(course+'.'+i).checked = false;
+		}
+	}
+	refresh(course);
+}
 
 function refresh(course){
 
-		courseSize = 0;
-		sumSize = 0;
-	
-		if(course==='i3301'){
-			courseSet = [725,771,242,2330,720,159,690,1662,443,327,274,307,601];
-			sumSet = [25,554,83,109,18,0,314,72,222,0,0,0,85];
-			
-			gitFlag = 0;
-			uml3Flag=0;
+	courseSize = 0;
+	sumSize = 0;
 
-			for(i = 1 ; i < 14 ; i++){	
-			  	if (document.getElementById(course+'.'+i).checked){
-			  		
-			  		if(i==5 || i ==6){
-			  			if(gitFlag==0){
-			  				gitFlag = 1;
-			  				sumSize += 18;
-			  			}
-			  		}
-			  		else if(i==9 || i ==10 || i==11 || i==12){
-			  			if(uml3Flag==0){
-			  				uml3Flag = 1;
-			  				sumSize += 222;
-			  			}
-			  		}
-			  		else{sumSize += sumSet[i-1];}
+	if(course==='i3301'){
+		courseSet = [725,771,242,2330,720,159,690,1662,443,327,274,307,601];
+		sumSet = [25,554,83,109,18,0,314,72,222,0,0,0,85];
+		
+		gitFlag = 0;
+		uml3Flag=0;
 
-			  		courseSize += courseSet[i-1];
-			  		
+		for(i = 1 ; i < 14 ; i++){	
+		  	if (document.getElementById(course+'.'+i).checked){
+		  		
+		  		if(i==5 || i ==6){
+		  			if(gitFlag==0){
+		  				gitFlag = 1;
+		  				sumSize += 18;
+		  			}
 		  		}
-		  	}
-	  	}
-	  	else if(course==='i3304'){
-			courseSet = [1576,1423,2755,2301,1252];
-
-			sumFlag = 0;
-			for(i = 1 ; i < 6 ; i++){	
-			  	if (document.getElementById(course+'.'+i).checked){
-			  		if(sumFlag == 0){
-			  			sumFlag = 1;
-			  			sumSize = 15847;
-			  		}
-			  		courseSize += courseSet[i-1];
+		  		else if(i==9 || i ==10 || i==11 || i==12){
+		  			if(uml3Flag==0){
+		  				uml3Flag = 1;
+		  				sumSize += 222;
+		  			}
 		  		}
-		  	}
-	  	}
+		  		else{sumSize += sumSet[i-1];}
 
+		  		courseSize += courseSet[i-1];
+		  		
+	  		}
+	  	}
+  	}
+  	else if(course==='i3304'){
+		courseSet = [1576,1423,2755,2301,1252];
+
+		sumFlag = 0;
+		for(i = 1 ; i < 6 ; i++){	
+		  	if (document.getElementById(course+'.'+i).checked){
+		  		if(sumFlag == 0){
+		  			sumFlag = 1;
+		  			sumSize = 15847;
+		  		}
+		  		courseSize += courseSet[i-1];
+	  		}
+	  	}
+  	}
+
+		else if(course==='i3305'){
+		courseSet = [2518,3136,2401,4316,1321,1103];
+		sumSet = [1459,1298,0,472,0,24];
+
+		Flag23 = 0;
+		Flag45 = 0;
+		for(i = 1 ; i < 7 ; i++){	
+			if (document.getElementById(course+'.'+i).checked){
+		  		if(i==2 || i==3){
+		  			if(Flag23 == 0){
+		  				Flag23 = 1;
+		  				sumSize += 1298;
+		  			}
+		  		}
+		  		else if(i==4 || i==5){
+		  			if(Flag45 == 0){
+		  				Flag45 = 1;
+		  				sumSize += 1298;
+		  			}
+		  		}
+		  		else{
+		  			sumSize += sumSet[i-1];
+		  		}
+		  		courseSize += courseSet[i-1];
+	  		}
+	  	}
+	}
+
+	if(course != 'i3306'){
 		document.getElementById(course+'course').innerHTML = "Download course ("+courseSize+"KB)";
 		document.getElementById(course+'summary').innerHTML = "Download summary ("+sumSize+"KB)";
 		both = courseSize + sumSize;
 		document.getElementById(course+'both').innerHTML = "Download both ("+both+"KB)";
+	}
+	else{
+		document.getElementById('i3306summary').innerHTML = "Download course (1530 KB)";
+	}
 }
 
 
@@ -182,8 +228,46 @@ function downloadnew(course, status){
 		  		zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
 			}
 		}
-		for(i=1 ; i < 9 ; i++){
+		for(i=1 ; i < 10 ; i++){
 			zip.folder("Summaries").file("i3304_"+i+".jpg", urlToPromise("data/I3304/Summaries/p"+i+".jpg"), {binary:true});
+		}
+	}
+
+	else if(course==='i3305'){ //GUI
+
+		courseSet = ['data/I3305/Courses/Ch1_Creational.pdf',
+		'data/I3305/Courses/Ch2_Structural.pdf',
+		'data/I3305/Courses/Ch3_Behavioral.pdf',
+		'data/I3305/Courses/Ch4A_JavaFx.pdf',
+		'data/I3305/Courses/Ch4B_SceneBuilder.pdf',
+		'data/I3305/Courses/Ch5_JDBC.pdf'];
+		sumSet=[
+		'data/I3305/Summaries/Ch1.jpg',
+		'data/I3305/Summaries/Ch1&2.jpg',
+		null,
+		'data/I3305/Summaries/Ch4_JavaFx.pdf',
+		'data/I3305/Summaries/Ch5_JDBC.pdf'];
+
+		sumFlag = 0;	
+    	for(i = 1 ; i < 7 ; i++){
+		  	if (document.getElementById(course+'.'+i).checked){
+		  		if(i==2 || i==3){
+		  			if(sumFlag == 0){
+		  				sumFlag = 1;
+		  				zip.folder("Summaries").file(sumSet[1].split("/")[3], urlToPromise(sumSet[1]), {binary:true});
+	  				}
+		  		}
+				else{zip.folder("Summaries").file("i3304_"+i+".jpg", urlToPromise(sumSet[i-1]), {binary:true});}
+		  		zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
+			}
+		}
+	}
+
+	else if(course==='i3306'){ //DB2
+
+	  	if (document.getElementById('i3306.1').checked){
+			zip.file("i3306_1.jpg", 'data/I3306/p1.jpg', {binary:true});
+			zip.file("i3306_2.jpg", 'data/I3306/p2.jpg', {binary:true});
 		}
 	}
 
@@ -202,7 +286,7 @@ function downloadnew(course, status){
  		saveAs(content, course+".zip");
 	});
  	
-
+	alert("Selected file(s) will be zipped and downloaded. Bad internet connection might cause delays.");
 
 }
 

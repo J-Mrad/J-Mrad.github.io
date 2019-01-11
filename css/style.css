@@ -64,6 +64,20 @@ img{
 	max-height:10%;
 }
 
+.icon-md-single{
+	margin-top:50px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	max-width:70%;
+}
+@media only screen and (max-width: 761px){
+
+	.icon-md{
+			width:100%;
+	}
+
+}
 /* Padding */
 
 .padded-low{
@@ -102,16 +116,16 @@ img{
 
 @media only screen and (max-width: 761px){
 
-		.PaddedOnMobiles {  /* Use to create spacing when needed after elements are set to 100% */
-			padding: 15px !important;
-		}
-		.UnPaddedOnMobiles{
-			padding: 0 !important;
-		}
-		
-		.smaller{
-			font-size: 8vw;
-		}
+	.PaddedOnMobiles {  /* Use to create spacing when needed after elements are set to 100% */
+		padding: 15px !important;
+	}
+	.UnPaddedOnMobiles{
+		padding: 0 !important;
+	}
+	
+	.smaller{
+		font-size: 8vw;
+	}
 		
 }
 
@@ -309,3 +323,5 @@ img{
 		max-width: 80%;
 	}
 }
+
+/* Table elementss */
