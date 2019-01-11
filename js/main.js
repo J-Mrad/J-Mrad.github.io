@@ -70,9 +70,9 @@ function refresh(course){
 			sumFlag = 0;
 			for(i = 1 ; i < 6 ; i++){	
 			  	if (document.getElementById(course+'.'+i).checked){
-			  		if(sumFlag != 0){
-			  			sumFlag = 0;
-			  			sumSize = 15,847;
+			  		if(sumFlag == 0){
+			  			sumFlag = 1;
+			  			sumSize = 15847;
 			  		}
 			  		courseSize += courseSet[i-1];
 		  		}
@@ -172,7 +172,7 @@ function downloadnew(course, status){
 	else if(course==='i3304'){ //Networking
 
 			courseSet = ['data/I3304/Courses/Ch1_Transport_Layer.pdf',
-			'data/I3304/Courses/Ch2_Routing_Algorithm.pdf',
+			'data/I3304/Courses/Ch2_Routing_Algorithms.pdf',
 			'data/I3304/Courses/Ch3_HTTP_FTP_TELNET.pdf',
 			'data/I3304/Courses/Ch4_Mail_DNS.pdf',
 			'data/I3304/Courses/Ch5_Security.pdf'];
