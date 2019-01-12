@@ -266,8 +266,8 @@ function downloadnew(course, status){
 	else if(course==='i3306'){ //DB2
 
 	  	if (document.getElementById('i3306.1').checked){
-			zip.file("i3306_1.jpg", 'data/I3306/p1.jpg', {binary:true});
-			zip.file("i3306_2.jpg", 'data/I3306/p2.jpg', {binary:true});
+			zip.file("i3306_1.jpg", urlToPromise('data/I3306/p1.jpg'), {binary:true});
+			zip.file("i3306_2.jpg", urlToPromise('data/I3306/p2.jpg'), {binary:true});
 		}
 	}
 
