@@ -12,8 +12,10 @@
 		<link rel = "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 		<link rel = "stylesheet" type = "text/css" href = "css/style.css">						<!-- Style -->
 		
-		<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">					<!-- Fading Animations -->
-		
+		<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">					<!-- Fading Animations -->
+																								<!-- Slider -->
+		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/css-toggle-switch@latest/dist/toggle-switch.css" />
+
 		<title>
 			Jad Mrad
 		</title>
@@ -95,6 +97,16 @@
 				</div>
 		</div>
 
+		<div class="row bgBlue">
+			<label class="switch-light margins-center padded-up" onclick="">
+				<input type="checkbox">
+				<span class="alert alert-light">
+					<span class="padded-slim">.zip</span>
+					<span class="padded-slim">Standard</span>
+					<a class="btn btn-primary"></a>
+				</span>
+			</label>
+		</div>
 
 		<div class = "row">
 
@@ -194,7 +206,6 @@
 					<button class="CustomButton1 margins-center" id = 'i3301summary' onClick = downloadnew('i3301',1)> Download Summary (0KB) </button>
 					<button class="CustomButton1 margins-center" id = 'i3301both' onClick = downloadnew('i3301',2)> Download Both (0KB) </button>
 					<br>
-					<h6 class="text-white">*/**: Courses share the same summary file</h6>
 				</div>
 
 
@@ -372,13 +383,13 @@
 	<!--Footer-->
 	
 		<div class = "row">
-			<div class = "col-4 bgDarkGray footer-col">
+			<div class = "col-sm-12 col-md-4 bgDarkGray footer-col">
 				<a href = "https://www.linkedin.com/in/jmrad/" target="_blank"> <img src = "icons/IN.png" class = "force-icon"> </a> 
 					<p>IN</p>
 			</div>
-			<div class="col-4 bgDarkGray">
+			<div class="col-sm-12 col-md-4 bgDarkGray">
 			</div>
-			<div class="col-4 bgDarkGray text-center text-white">
+			<div class="col-m-12 col-md-4 bgDarkGray text-center text-white">
 				<br>
 				<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">J-Mrad.github.io</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="https://www.linkedin.com/in/jmrad/" property="cc:attributionName" rel="cc:attributionURL">Jad Mrad</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>.<br />
 			</div>
