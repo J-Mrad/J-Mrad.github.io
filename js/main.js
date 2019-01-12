@@ -1,10 +1,3 @@
-
-// JQ
-
-
-
-// JS
-
 //Header:
 
 var HeaderBG = 1; // 1 = not blinking image, 2 = blinking
@@ -28,6 +21,21 @@ function download(file){
 }
 
 
+$().ready(function(){
+   $('.standardHolder').hide();
+});
+slide = 0;
+function toggleRows() {
+	if(slide==1){
+	    $(".zipHolder").toggle();
+	    $('.standardHolder').toggle();
+	    slide = 0;
+	}
+	else{
+		slide++;
+	}
+}
+
 
 function toggleAll(course,count){
 	if(document.getElementById(course+"checkAll").checked){
@@ -50,7 +58,7 @@ function refresh(course){
 
 	if(course==='i3301'){
 		courseSet = [725,771,242,2330,720,159,690,1662,443,327,274,307,601];
-		sumSet = [25,554,83,109,18,0,314,72,222,0,0,0,85];
+		sumSet = [25,554,83,109,0,18,0,314,72,222,0,0,85];
 		
 		gitFlag = 0;
 		uml3Flag=0;
@@ -181,18 +189,25 @@ function downloadnew(course, status){
 			sumSet = ['data/I3301/Summaries/ch1.docx',
 			'data/I3301/Summaries/ch2.docx',
 			'data/I3301/Summaries/ch3.docx',
-			'data/I3301/Summaries/ch4.docx',
+			'data/I3301/Summaries/ch4.docx',null,
 			'data/I3301/Summaries/git.docx',null,
 			'data/I3301/Summaries/uml1.docx',
 			'data/I3301/Summaries/uml2.docx',
-			'data/I3301/Summaries/uml3.docx',null,null,null,
+			'data/I3301/Summaries/uml3.docx',null,null,
 			'data/I3301/Summaries/ch7.docx'];
 			
+			ch4flag = 0;
 			gitFlag = 0;
 			uml3Flag=0;
     	for(i = 1 ; i < 14 ; i++){	
 		  	if (document.getElementById(course+'.'+i).checked){
 		  		
+		  		if(i==4 || i ==5){
+		  			if(ch4flag==0){
+		  				ch4flag = 1;
+						zip.folder("Summaries").file(sumSet[4].split("/")[3], urlToPromise('data/I3301/Summaries/ch4.docx'), {binary:true});
+	 	 			}
+		  		}
 		  		if(i==5 || i ==6){
 		  			if(gitFlag==0){
 		  				gitFlag = 1;
@@ -245,8 +260,8 @@ function downloadnew(course, status){
 		'data/I3305/Summaries/Ch1.jpg',
 		'data/I3305/Summaries/Ch1&2.jpg',
 		null,
-		'data/I3305/Summaries/Ch4_JavaFx.pdf',
-		'data/I3305/Summaries/Ch5_JDBC.pdf'];
+		'data/I3305/Summaries/Ch4_JavaFx.docx',
+		'data/I3305/Summaries/Ch5_JDBC.docx'];
 
 		sumFlag = 0;	
     	for(i = 1 ; i < 7 ; i++){

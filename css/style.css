@@ -113,6 +113,15 @@ img{
 	margin:	0 auto;
 }
 
+.margins-center-noblock{
+	margin:	0 auto;
+}
+
+.margins-full-center{
+	display: block;
+	margin:	auto;
+}
+
 /* Mobile Padding */
 
 @media only screen and (max-width: 761px){
@@ -309,13 +318,12 @@ img{
 .CustomButton2{
 	background-color: #618AFE;
 	transition: 1s all ease;
-	padding: 10px 20px;
-	margin-bottom: 30px;
+	padding: 5px 5px;
 }
 
 .CustomButton2:hover{
 	background-color: #FFFFFF;
-	transform: scale(1.1);
+	transform: scale(0.9);
 	box-shadow: 0px 1px 0px 0px;
 }
 
@@ -324,5 +332,3 @@ img{
 		max-width: 80%;
 	}
 }
-
-/* Table elementss */

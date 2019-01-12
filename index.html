@@ -68,7 +68,6 @@
 	</header>
 	</div>
 	<!-- About -->
-	<!-- div class="container-fluid fixflow" -->
 
 		<div class = "row bgWhite">
 			<div class="col-12">
@@ -77,28 +76,26 @@
 		</div>	
 
 		<div class = "row bgWhite">
-			<div class="col-12 text-center"> 
-				The data provided on this site is designed to provide helpful information on the subjects discussed. This site is not meant to be used, nor should be used, as a substitute to attending classes. For academic years after 2018-2019 it is recommended that you consult your professor(s) before studying the provided courses. The developer is not responsible for any information later deemed false or inaccurate and is not liable for any negative consequences caused by the use of the site. Users should be aware that courses are subject to change between academic years.
+			<div class="col-12 text-center">
+				The data provided on this site is designed to provide helpful information on the subjects listed. This site is not meant to be used, nor should be used, as a substitute to attending classes. For academic years after 2018-2019 it is recommended that you consult your professor(s) before studying the provided courses. The developer is not responsible for any information later deemed false or inaccurate and is not liable for any negative consequences caused by the use of the site. Users should be aware that courses are subject to change between academic years.
 			</div>
 		</div>		
 
+		<!-- Summaries 3rd year -->
 		<div class = "row" id = "3rd">
 				<div class = "col-sm-12 col-lg-4 bgBlue"> 
 				</div>
-				
 				<div class = "col-sm-12 col-lg-4 bgBlue"> 
 					<img src="images/Skills.png" class="padded-up icon-md-single">
 					<h1 class="text-center"> 3rd Year Summaries </h1>
 					<h6 class="text-center text-white"> */**: Courses share the same summary file </h6>
 				</div>
-				
 				<div class = "col-sm-12 col-lg-4 bgBlue"> 
-				
 				</div>
 		</div>
 
 		<div class="row bgBlue">
-			<label class="switch-light margins-center padded-up" onclick="">
+			<label class="switch-light margins-center padded-up" onclick="toggleRows()">
 				<input type="checkbox">
 				<span class="alert alert-light">
 					<span class="padded-slim">.zip</span>
@@ -108,8 +105,10 @@
 			</label>
 		</div>
 
-		<div class = "row">
-
+		<!-- 3rd year Zip files downloader -->
+		<div class="zipHolder">
+			<div class = "row">
+				<!-- I3301 -->
 				<div class = "col-sm-12 col-md-6 col-lg-3 bgLightGray"> 
 					<img class="icon-md" src ="icons/Prog.png">
 					<h2 class="text-center">[I3301]</h2>
@@ -128,7 +127,7 @@
 				                <strong>Ch1 -  </strong> Introduction
 				            </label>
 				        </li>
- 				        <li>
+					        <li>
 				            <label>
 				                <input type="checkbox" id="i3301.2" onclick="refresh('i3301');"/>
 				                <strong>Ch2 -  </strong> Software Processes
@@ -208,7 +207,7 @@
 					<br>
 				</div>
 
-
+				<!-- I3302 -->
 				<div class = "col-sm-12 col-md-6 col-lg-3 bgMidGray"> 
 					<img class="icon-md" src ="icons/Web.png">
 					<h2 class="text-center">[I3302]</h2>
@@ -220,6 +219,7 @@
 					</s><br>
 				</div>
 
+				<!-- I3303 -->
 				<div class = "col-sm-12 col-md-6 col-lg-3 bgDarkGray">
 					<img class="icon-md" src ="icons/OS.gif">
 					<h2 class="text-center">[I3303]</h2>
@@ -231,6 +231,7 @@
 					</s><br>
 				</div>
 
+				<!-- I3304 -->
 				<div class = "col-sm-12 col-md-6 col-lg-3 bgLightGray">
 					<img class="icon-md" src ="icons/NW.png">
 					<h2 class="text-center">[I3304]</h2>
@@ -250,7 +251,7 @@
 				                <strong> Ch1 - </strong> Transport Layer*
 				            </label>
 				        </li>
- 				        <li>
+					        <li>
 				            <label>
 				                <input type="checkbox" id="i3304.2" onclick="refresh('i3304');"/>
 				                <strong> Ch2 - </strong> Routing Algorithms*
@@ -283,105 +284,467 @@
 					<br>
 				</div>
 
-		</div>
+			</div>
+			<!-- row2 of same section (3rd year zip) -->
+			<div class="row">
+				<!-- I3305 -->
+				<div class = "col-sm-12 col-md-6 col-lg-3 bgMidGray"> 
+					<img class="icon-md" src ="icons/GUI.png">
+					<h2 class="text-center">[I3305]</h2>
+					<h5 class="text-center">GUI</h5>
+					<br>
 
-		<div class="row">
+						<ul style="font-size:14px">
+							<li>
+					            <label>
+					                <input type="checkbox" id="i3305checkAll" onclick="toggleAll('i3305',6);"/>
+					                <strong> Select All </strong>
+					            </label>
+					        </li>
+					        <li>
+					            <label>
+					                <input type="checkbox" id="i3305.1" onclick="refresh('i3305');"/>
+					                <strong> Ch1 -  </strong> Creational Patterns
+					            </label>
+					        </li>
+	 				        <li>
+					            <label>
+					                <input type="checkbox" id="i3305.2" onclick="refresh('i3305');"/>
+					                <strong> Ch2 -  </strong> Structural Patterns
+					            </label>
+					        </li>
+					        <li>
+					            <label>
+					                <input type="checkbox" id="i3305.3" onclick="refresh('i3305');"/>
+					                <strong> Ch3 -  </strong> Behavioral Patterns
+					            </label>
+					        </li>
+					        <li>
+					            <label>
+					                <input type="checkbox" id="i3305.4" onclick="refresh('i3305');"/>
+					                <strong> Ch4A - </strong>  JavaFx
+					            </label>
+					        </li>
+					        <li>
+					            <label>
+					                <input type="checkbox" id="i3305.5" onclick="refresh('i3305');"/>
+					                <strong> Ch4B - </strong>  SceneBuilder
+					            </label>
+					        </li>
+					        <li>
+					            <label>
+					                <input type="checkbox" id="i3305.6" onclick="refresh('i3305');"/>
+					                <strong> Ch5 -  </strong> JDBC
+					            </label>
+					        </li>
 
-			<div class = "col-sm-12 col-md-6 col-lg-3 bgMidGray"> 
-				<img class="icon-md" src ="icons/GUI.png">
-				<h2 class="text-center">[I3305]</h2>
-				<h5 class="text-center">GUI</h5>
-				<br>
+					    </ul>
 
+					<button class="CustomButton1 margins-center" id = 'i3305course' onClick = downloadnew('i3305',0)> Download Course (0KB) </button> 
+					<button class="CustomButton1 margins-center" id = 'i3305summary' onClick = downloadnew('i3305',1)> Download Summary (0KB) </button>
+					<button class="CustomButton1 margins-center" id = 'i3305both' onClick = downloadnew('i3305',2)> Download Both (0KB) </button>
+					<br>
+				</div>
+
+				<!-- I3306 -->
+				<div class = "col-sm-12 col-md-6 col-lg-3 bgDarkGray"> 
+					<img class="icon-md" src ="icons/DB.png">
+					<h2 class="text-center">[I3306]</h2>
+					<h5 class="text-center">Database 2</h5>
+					<br>
 					<ul style="font-size:14px">
-						<li>
-				            <label>
-				                <input type="checkbox" id="i3305checkAll" onclick="toggleAll('i3305',6);"/>
-				                <strong> Select All </strong>
-				            </label>
-				        </li>
 				        <li>
 				            <label>
-				                <input type="checkbox" id="i3305.1" onclick="refresh('i3305');"/>
-				                <strong> Ch1 -  </strong> Creational Patterns
+				                <input type="checkbox" id="i3306.1" onclick="refresh('i3306');"/>
+				                <strong> Summary </strong>  Yes this is the entire course
 				            </label>
 				        </li>
- 				        <li>
-				            <label>
-				                <input type="checkbox" id="i3305.2" onclick="refresh('i3305');"/>
-				                <strong> Ch2 -  </strong> Structural Patterns
-				            </label>
-				        </li>
-				        <li>
-				            <label>
-				                <input type="checkbox" id="i3305.3" onclick="refresh('i3305');"/>
-				                <strong> Ch3 -  </strong> Behavioral Patterns
-				            </label>
-				        </li>
-				        <li>
-				            <label>
-				                <input type="checkbox" id="i3305.4" onclick="refresh('i3305');"/>
-				                <strong> Ch4A - </strong>  JavaFx
-				            </label>
-				        </li>
-				        <li>
-				            <label>
-				                <input type="checkbox" id="i3305.5" onclick="refresh('i3305');"/>
-				                <strong> Ch4B - </strong>  SceneBuilder
-				            </label>
-				        </li>
-				        <li>
-				            <label>
-				                <input type="checkbox" id="i3305.6" onclick="refresh('i3305');"/>
-				                <strong> Ch5 -  </strong> JDBC
-				            </label>
-				        </li>
-
 				    </ul>
+					<button class="CustomButton1 margins-center" id = 'i3306summary' onClick = downloadnew('i3306',2)> Download Summary (0KB) </button>
+					<br>
+				</div>
 
-				<button class="CustomButton1 margins-center" id = 'i3305course' onClick = downloadnew('i3305',0)> Download Course (0KB) </button> 
-				<button class="CustomButton1 margins-center" id = 'i3305summary' onClick = downloadnew('i3305',1)> Download Summary (0KB) </button>
-				<button class="CustomButton1 margins-center" id = 'i3305both' onClick = downloadnew('i3305',2)> Download Both (0KB) </button>
-				<br>
+				<!-- I3306 -->
+				<div class = "col-sm-12 col-md-6 col-lg-3 bgLightGray">
+					<img class="icon-md" src ="icons/Mobile.png">
+					<h2 class="text-center">[I3350]</h2>
+					<h5 class="text-center">Mobile Applications Development</h5>
+					<br>
+					<s><button class="CustomButton1 margins-center"> Download Course </button>
+					<button class="CustomButton1 margins-center"> Download Summary </button>
+					<button class="CustomButton1 margins-center"> Download Full </button>
+					</s><br>
+				</div>
+
+				<div class = "col-sm-12 col-md-6 col-lg-3 bgMidGray">
+				
+				</div>
+
 			</div>
-
-			<div class = "col-sm-12 col-md-6 col-lg-3 bgDarkGray"> 
-				<img class="icon-md" src ="icons/DB.png">
-				<h2 class="text-center">[I3306]</h2>
-				<h5 class="text-center">Database 2</h5>
-				<br>
-				<ul>
-			        <li>
-			            <label style="font-size:14px">
-			                <input type="checkbox" id="i3306.1" onclick="refresh('i3306');"/>
-			                <strong> Summary </strong>  Yes this is the entire course
-			            </label>
-			        </li>
-			    </ul>
-				<button class="CustomButton1 margins-center" id = 'i3306summary' onClick = downloadnew('i3306',2)> Download Summary (0KB) </button>
-				<br>
-			</div>
-
-			<div class = "col-sm-12 col-md-6 col-lg-3 bgLightGray">
-				<img class="icon-md" src ="icons/Mobile.png">
-				<h2 class="text-center">[I3350]</h2>
-				<h5 class="text-center">Mobile Applications Development</h5>
-				<br>
-				<s><button class="CustomButton1 margins-center"> Download Course </button>
-				<button class="CustomButton1 margins-center"> Download Summary </button>
-				<button class="CustomButton1 margins-center"> Download Full </button>
-				</s><br>
-			</div>
-
-			<div class = "col-sm-12 col-md-6 col-lg-3 bgMidGray">
-			
-			</div>
-
 		</div>
 
+		<!-- 3rd year standard file downloader -->
+		<div class="standardHolder">
+
+			<div class = "row">
+				<!-- I3301 -->
+				<div class = "col-sm-12 col-md-6 col-lg-4 bgLightGray"> 
+					<img class="icon-md" src ="icons/Prog.png">
+					<h2 class="text-center">[I3301]</h2>
+					<h5 class="text-center">Software Engineering</h5>
+					<br>
+					<Table border=1 style="font-size:14px;" class="margins-center-noblock">
+				        <tr>
+				            <td>
+				                <strong>Ch1 -  </strong> Introduction
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Courses/Ch1_Introduction.pptx');"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Summaries/ch1.docx');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch2 -  </strong> Software Processes
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Courses/Ch2_Software_Processes.pptx');"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Summaries/ch2.docx');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch3 -  </strong> Agile
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Courses/Ch3_Agile.pptx');"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Summaries/ch3.docx');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch4A - </strong>  Requirements Engineering
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('Ch4A_Requirements_Gathering.ppt');"> Course </button>
+				            </td>
+				            <td rowspan=2>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Summaries/ch4.docx');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch4B - </strong>  Requirements Gathering
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Courses/Ch4B_Requirements_Engineering.pptx');"> Course </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch5A - </strong>  Git Basic Commands
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Courses/Ch5A_Git_Basic_Commands.pdf');"> Course </button>
+				            </td>
+				            <td rowspan=2>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Summaries/git.docx');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch5B - </strong>  Git Cheat Sheet
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Courses/Ch5B_Git_Cheat_Sheet.pdf');"> Course </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch6A - </strong>  UML1 - Use Case Diagram
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Courses/Ch6A_UML_Use_Case.pptx');"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Summaries/uml1.docx');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch6B - </strong>  UML2 - Class Diagram
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Courses/Ch6B_UML_Class.ppt');"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Summaries/uml2.docx');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch6C - </strong>  UML3 - Sequence & State Diagrams
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Courses/Ch6C_UML_Sequence_State.ppt');"> Course </button>
+				            </td>
+				            <td rowspan=3>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Summaries/uml3.docx');"> Summary </button>
+				            </td>
+				        </tr>
+	   				    <tr>
+				            <td>
+				                <strong>Ch6D - </strong>  UML3 - Sequence Diagrams
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Courses/Ch6D_UML_Sequence.pdf');"> Course </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch6E - </strong>  UML3 - State Diagrams
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Courses/Ch6E_UML_State.pdf');"> Course </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch7 -  </strong> Testing
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Courses/Ch7_Testing.pptx');"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3301/Summaries/ch7.docx');"> Summary </button>
+				            </td>
+				        </tr>
+				    </table>
+				    <br>
+				</div>
+
+				<!-- I3302 -->
+				<div class = "col-sm-12 col-md-6 col-lg-4 bgMidGray"> 
+					<img class="icon-md" src ="icons/Web.png">
+					<h2 class="text-center">[I3302]</h2>
+					<h5 class="text-center">PHP</h5>
+					<br>
+					<Table border=1 style="font-size:14px;" class="margins-center-noblock">
+				        <tr>
+				            <td>
+				                <s><strong>Ch1 -  </strong> Placeholder </s>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download();"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download();"> Summary </button>
+				            </td>
+				        </tr>
+
+					</table>
+					<br>
+				</div>
+				<!-- I3303 -->
+				<div class = "col-sm-12 col-md-6 col-lg-4 bgDarkGray">
+					<img class="icon-md" src ="icons/OS.gif">
+					<h2 class="text-center">[I3303]</h2>
+					<h5 class="text-center">Operating Systems 2</h5>
+					<br>
+					<Table border=1 style="font-size:14px;" class="margins-center-noblock">
+				        <tr>
+				            <td>
+				                <s><strong>Ch1 -  </strong> Placeholder </s>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download();"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download();"> Summary </button>
+				            </td>
+				        </tr>
+
+					</table>
+					<br>
+				</div>
+				<!-- I3304 -->
+				<div class = "col-sm-12 col-md-6 col-lg-4 bgMidGray">
+					<img class="icon-md" src ="icons/NW.png">
+					<h2 class="text-center">[I3304]</h2>
+					<h5 class="text-center">Networking</h5>
+					<br>
+					<Table border=1 style="font-size:14px;" class="margins-center-noblock">
+				        <tr>
+				            <td>
+				                <strong> Ch1 - </strong> Transport Layer
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3304/Courses/Ch1_Transport_Layer.pdf');"> Course </button>
+				            </td>
+				            <td rowspan=5>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3304/Summaries/I3304_Summary.pdf');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong> Ch2 - </strong> Routing Algorithms
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3304/Courses/Ch2_Routing_Algorithms.pdf');"> Course </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong> Ch3 - </strong> HTTP FTP TELNET
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3304/Courses/Ch3_HTTP_FTP_TELNET.pdf');"> Course </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong> Ch4 - </strong> Mail & DNS
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3304/Courses/Ch4_Mail_DNS.pdf');"> Course </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong> Ch5 - </strong> Security
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3304/Courses/Ch5_Security.pdf');"> Course </button>
+				            </td>
+				        </tr>
+					</table>
+					<br>
+				</div>
+				<!-- I3305 -->
+				<div class = "col-sm-12 col-md-6 col-lg-4 bgDarkGray"> 
+					<img class="icon-md" src ="icons/GUI.png">
+					<h2 class="text-center">[I3305]</h2>
+					<h5 class="text-center">GUI</h5>
+					<br>
+					<Table border=1 style="font-size:14px;" class="margins-center-noblock">
+				        <tr>
+				            <td>
+				                <strong> Ch1 -  </strong> Creational Patterns
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3305/Courses/Ch1_Creational.pdf');"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3305/Summaries/Ch1.jpg');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong> Ch2 -  </strong> Structural Patterns
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3305/Courses/Ch2_Structural.pdf');"> Course </button>
+				            </td>
+				            <td rowspan=2>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3305/Summaries/Ch1.jpg');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong> Ch3 -  </strong> Behavioral Patterns
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3305/Courses/Ch3_Behavioral.pdf');"> Course </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong> Ch4A - </strong>  JavaFx
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3305/Courses/Ch4A_JavaFx.pdf');"> Course </button>
+				            </td>
+				            <td rowspan=2>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3305/Summaries/Ch4_JavaFx.docx');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong> Ch4B - </strong>  SceneBuilder
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3305/Courses/Ch4B_SceneBuilder.pdf');"> Course </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong> Ch5 -  </strong> JDBC
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3304/Courses/Ch5_Security.pdf');"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3305/Summaries/Ch5_JDBC.docx');"> Summary </button>
+				            </td>
+				        </tr>
+					</table>
+					<br>
+				</div>
+				<!-- I3306 -->
+				<div class = "col-sm-12 col-md-6 col-lg-4 bgLightGray"> 
+					<img class="icon-md" src ="icons/DB.png">
+					<h2 class="text-center">[I3306]</h2>
+					<h5 class="text-center">Database 2</h5>
+					<br>
+					<Table border=1 style="font-size:14px;" class="margins-center-noblock">
+				        <tr>
+				            <td>
+				                <strong> Summary </strong>  Yes this is the entire course
+				            </td>
+				            <td>
+							<button class="CustomButton2 margins-center"><s> Course </s></button>
+				            	No you don't need that
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3306/I3306_Summary.pdf');"> Summary </button>
+				            </td>
+				        </tr>
+				    </Table>
+				</div>
+				<!-- I3350 -->
+				<div class = "col-sm-12 col-md-6 col-lg-4 bgLightGray">
+					<img class="icon-md" src ="icons/Mobile.png">
+					<h2 class="text-center">[I3350]</h2>
+					<h5 class="text-center">Mobile Applications Development</h5>
+					<br>
+					<table>
+						<Table border=1 style="font-size:14px;" class="margins-center-noblock">
+				        <tr>
+				            <td>
+				                <s><strong>Ch1 -  </strong> Placeholder </s>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download();"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download();"> Summary </button>
+				            </td>
+				        </tr>
+
+					</table>
+					<br>
+				</div>
+			</div>
+		</div>
 	</div>
-	<!--Footer-->
-	
+
+	<!--Footer-->	
 		<div class = "row">
 			<div class = "col-sm-12 col-md-4 bgDarkGray footer-col">
 				<a href = "https://www.linkedin.com/in/jmrad/" target="_blank"> <img src = "icons/IN.png" class = "force-icon"> </a> 
