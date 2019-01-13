@@ -275,12 +275,50 @@
 				                <strong> Ch5 - </strong> Security*
 				            </label>
 				        </li>
-
+				    </ul>
+				    Lab Courses:
+					<ul style="font-size:14px">
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3304LABcheckAll" onclick="toggleAll('i3304LAB',5);"/>
+				                <strong> Select All </strong>
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3304LAB.1" onclick="refresh('i3304LAB');"/>
+				                <strong> Ch1 - </strong> Static Routing*
+				            </label>
+				        </li>
+					        <li>
+				            <label>
+				                <input type="checkbox" id="i3304LAB.2" onclick="refresh('i3304LAB');"/>
+				                <strong> Ch2 - </strong> Dynamic Routing*
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3304LAB.3" onclick="refresh('i3304LAB');"/>
+				                <strong> Ch3 - </strong> RIP*
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3304LAB.4" onclick="refresh('i3304LAB');"/>
+				                <strong> Ch4 - </strong> OSPF*
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3304LAB.5" onclick="refresh('i3304LAB');"/>
+				                <strong> Ch5 - </strong> VLAN*
+				            </label>
+				        </li>
 				    </ul>
 
-					<button class="CustomButton1 margins-center" id = 'i3304course' onClick = downloadnew('i3304',0)> Download Course (0KB) </button> 
-					<button class="CustomButton1 margins-center" id = 'i3304summary' onClick = downloadnew('i3304',1)> Download Summary (0KB) </button>
-					<button class="CustomButton1 margins-center" id = 'i3304both' onClick = downloadnew('i3304',2)> Download Both (0KB) </button>
+					<button class="CustomButton1 margins-center" id = 'i3304LABcourse' onClick = downloadnew('i3304LAB',0)> Download Course (0KB) </button> 
+					<button class="CustomButton1 margins-center" id = 'i3304LABsummary' onClick = downloadnew('i3304LAB',1)> Download Summary (0KB) </button>
+					<button class="CustomButton1 margins-center" id = 'i3304LABboth' onClick = downloadnew('i3304LAB',2)> Download Both (0KB) </button>
 					<br>
 				</div>
 
@@ -625,6 +663,53 @@
 				        </tr>
 					</table>
 					<br>
+					Lab Courses:
+
+					<Table border=1 style="font-size:14px;" class="margins-center-noblock">
+				        <tr>
+				            <td>
+				                <strong> Ch1 - </strong> Static Routing
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3304LAB/Courses/Ch1_Static_Routing.pdf');"> Course </button>
+				            </td>
+				            <td rowspan=5>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3304LAB/Summaries/I3304_Summary.pdf');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong> Ch2 - </strong> Dynamic Routing
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3304LAB/Courses/Ch2_Dynamic_Routing.pdf');"> Course </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong> Ch3 - </strong> RIP
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3304LAB/Courses/Ch3_RIP.pdf');"> Course </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong> Ch4 - </strong> OSPF
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3304LAB/Courses/Ch4_OSPF.pdf');"> Course </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong> Ch5 - </strong> VLAN
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3304LAB/Courses/Ch5_VLAN.pdf');"> Course </button>
+				            </td>
+				        </tr>
+					</table>
 				</div>
 				<!-- I3305 -->
 				<div class = "col-sm-12 col-md-6 col-lg-4 bgDarkGray"> 

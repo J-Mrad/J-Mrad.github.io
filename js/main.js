@@ -99,8 +99,22 @@ function refresh(course){
 	  		}
 	  	}
   	}
+	else if(course==='i3304LAB'){
+		courseSet = [1429,798,1603,1349,1761];
 
-		else if(course==='i3305'){
+		sumFlag = 0;
+		for(i = 1 ; i < 6 ; i++){	
+		  	if (document.getElementById(course+'.'+i).checked){
+		  		if(sumFlag == 0){
+		  			sumFlag = 1;
+		  			sumSize = 37;
+		  		}
+		  		courseSize += courseSet[i-1];
+	  		}
+	  	}
+  	}
+
+	else if(course==='i3305'){
 		courseSet = [2518,3136,2401,4316,1321,1103];
 		sumSet = [1459,1298,0,472,0,24];
 
@@ -167,8 +181,6 @@ function urlToPromise(url) {
 function downloadnew(course, status){
 
     var zip = new JSZip();
-
-
 
 
     if(course==='i3301'){ //Software Engineering
@@ -245,6 +257,24 @@ function downloadnew(course, status){
 		}
 		for(i=1 ; i < 10 ; i++){
 			zip.folder("Summaries").file("i3304_"+i+".jpg", urlToPromise("data/I3304/Summaries/p"+i+".jpg"), {binary:true});
+		}
+	}
+
+	else if(course==='i3304LAB'){ //Networking Lab
+
+			courseSet = ['data/I3304LAB/Courses/Ch1_Static_Routing.pdf',
+			'data/I3304LAB/Courses/Ch2_Dynamic_Routing.pdf',
+			'data/I3304LAB/Courses/Ch3_RIP.pdf',
+			'data/I3304LAB/Courses/Ch4_OSPF.pdf',
+			'data/I3304LAB/Courses/Ch5_VLAN.pdf'];
+			
+    	for(i = 1 ; i < 6 ; i++){
+		  	if (document.getElementById(course+'.'+i).checked){
+		  		zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
+			}
+		}
+		for(i=1 ; i < 10 ; i++){
+			zip.folder("Summaries").file("i3304_LAB.jpg", urlToPromise("data/I3304LAB/Summaries/I3304_LAB_Summary.docx"), {binary:true});
 		}
 	}
 
