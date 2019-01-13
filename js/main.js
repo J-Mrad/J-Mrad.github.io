@@ -258,11 +258,8 @@ function downloadnew(course, status){
 		for(i=1 ; i < 10 ; i++){
 			zip.folder("Summaries").file("i3304_"+i+".jpg", urlToPromise("data/I3304/Summaries/p"+i+".jpg"), {binary:true});
 		}
-	}
 
-	else if(course==='i3304LAB'){ //Networking Lab
-
-			courseSet = ['data/I3304LAB/Courses/Ch1_Static_Routing.pdf',
+		courseSet = ['data/I3304LAB/Courses/Ch1_Static_Routing.pdf',
 			'data/I3304LAB/Courses/Ch2_Dynamic_Routing.pdf',
 			'data/I3304LAB/Courses/Ch3_RIP.pdf',
 			'data/I3304LAB/Courses/Ch4_OSPF.pdf',
