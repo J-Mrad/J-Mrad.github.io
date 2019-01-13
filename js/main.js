@@ -48,7 +48,8 @@ function toggleAll(course,count){
 	  		document.getElementById(course+'.'+i).checked = false;
 		}
 	}
-	refresh(course);
+	if(course ==='i3304LAB')refresh('i3304');
+	else refresh(course);
 }
 
 function refresh(course){
@@ -93,21 +94,19 @@ function refresh(course){
 		  	if (document.getElementById(course+'.'+i).checked){
 		  		if(sumFlag == 0){
 		  			sumFlag = 1;
-		  			sumSize = 15847;
+		  			sumSize += 15847;
 		  		}
 		  		courseSize += courseSet[i-1];
 	  		}
 	  	}
-  	}
-	else if(course==='i3304LAB'){
 		courseSet = [1429,798,1603,1349,1761];
 
 		sumFlag = 0;
 		for(i = 1 ; i < 6 ; i++){	
-		  	if (document.getElementById(course+'.'+i).checked){
+		  	if (document.getElementById(course+'LAB.'+i).checked){
 		  		if(sumFlag == 0){
 		  			sumFlag = 1;
-		  			sumSize = 37;
+		  			sumSize += 37;
 		  		}
 		  		courseSize += courseSet[i-1];
 	  		}
