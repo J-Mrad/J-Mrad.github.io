@@ -408,10 +408,105 @@
 					<h2 class="text-center">[I3350]</h2>
 					<h5 class="text-center">Mobile Applications Development</h5>
 					<br>
-					<s><button class="CustomButton1 margins-center"> Download Course </button>
-					<button class="CustomButton1 margins-center"> Download Summary </button>
-					<button class="CustomButton1 margins-center"> Download Full </button>
-					</s><br>
+					<ul style="font-size:14px">
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.1" onclick="refresh('i3350');"/>
+					        	<strong> Ch0 -  </strong> Java Revision 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.2" onclick="refresh('i3350');"/>
+					        	<strong> Ch1 -  </strong> Introduction 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.3" onclick="refresh('i3350');"/>
+					        	<strong> Ch2 -  </strong> Widgets 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.4" onclick="refresh('i3350');"/>
+					        	<strong> Ch3 -  </strong> Layouts 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.5" onclick="refresh('i3350');"/>
+					        	<strong> Ch4 -  </strong> Intent 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.6" onclick="refresh('i3350');"/>
+					        	<strong> Ch5 -  </strong> Activity LifeCycle 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.7" onclick="refresh('i3350');"/>
+					        	<strong> Ch6 -  </strong> Shared Preferences 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.8" onclick="refresh('i3350');"/>
+					        	<strong> Ch7 -  </strong> File Storage 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.9" onclick="refresh('i3350');"/>
+					        	<strong> Ch8 -  </strong> Notification 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.10" onclick="refresh('i3350');"/>
+					        	<strong> Ch9 -  </strong> SQLite 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.11" onclick="refresh('i3350');"/>
+					        	<strong> Ch10 -  </strong> Fragments 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.12" onclick="refresh('i3350');"/>
+					        	<strong> Ch10ex -  </strong> FragmentsManager 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.13" onclick="refresh('i3350');"/>
+					        	<strong> Ch11 -  </strong> Async Tasks 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.14" onclick="refresh('i3350');"/>
+					        	<strong> Ch12 -  </strong> Broadcast Receiver 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.15" onclick="refresh('i3350');"/>
+					        	<strong> Ch12ex -  </strong> Wifi 
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				            	<input type="checkbox" id="i3350.16" onclick="refresh('i3350');"/>
+					        	<strong> Summary -  </strong> All in one 
+				            </label>
+				        </li>
+				    </ul>
+					<button class="CustomButton1 margins-center" id = 'i3350full' onClick = downloadnew('i3350',2)> Download (0KB) </button>
 				</div>
 
 				<div class = "col-sm-12 col-md-6 col-lg-3 bgMidGray">
@@ -812,16 +907,140 @@
 						<Table border=1 style="font-size:14px;" class="margins-center-noblock">
 				        <tr>
 				            <td>
-				                <s><strong>Ch1 -  </strong> Placeholder </s>
+				                <strong> Ch0 -  </strong> Java Revision 
 				            </td>
 				            <td>
-        						<button class="CustomButton2 margins-center" onclick="download();"> Course </button>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter0_Java_Revision.pdf');"> Course </button>
 				            </td>
-				            <td>
-        						<button class="CustomButton2 margins-center" onclick="download();"> Summary </button>
+				            <td rowspan =15>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Summaries/I3350_Summary.docx');"> Summary </button>
 				            </td>
 				        </tr>
+				        <tr>
+				            <td>
+			        			<strong> Ch1 -  </strong> Introduction 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter1_Introduction.pdf');"> Course </button>
+				            </td>
 
+				        </tr>
+				        <tr>
+				            <td>
+					        	<strong> Ch2 -  </strong> Widgets 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter2_Gui_Widgets_list.pdf');"> Course </button>
+				            </td>
+
+				        </tr>
+				        <tr>
+				            <td>
+					        	<strong> Ch3 -  </strong> Layouts 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter3_Layout.pdf');"> Course </button>
+				            </td>
+
+				        </tr>
+				        <tr>
+				            <td>
+					        	<strong> Ch4 -  </strong> Intent 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter4_Intents.pdf');"> Course </button>
+				            </td>
+
+				        </tr>
+				        <tr>
+				            <td>
+					        	<strong> Ch5 -  </strong> Activity LifeCycle 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter5_Activity_LifeCycle.pdf');"> Course </button>
+				            </td>
+
+				        </tr>
+				            <td>
+					        	<strong> Ch6 -  </strong> Shared Preferences 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter6_Shared_Preferences.pdf');"> Course </button>
+				            </td>
+
+				        </tr>
+				        <tr>
+				            <td>
+					        	<strong> Ch7 -  </strong> File Storage 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter7_Files_Storage.pdf');"> Course </button>
+				            </td>
+
+				        </tr>
+				        <tr>
+				            <td>
+					        	<strong> Ch8 -  </strong> Notification 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter8_Notifications.pdf');"> Course </button>
+				            </td>
+
+				        </tr>
+				        <tr>
+				            <td>
+					        	<strong> Ch9 -  </strong> SQLite 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter9_SQLITE.pdf');"> Course </button>
+				            </td>
+
+				        </tr>
+				        <tr>
+				            <td>
+					        	<strong> Ch10 -  </strong> Fragments 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter10_Fragments.pdf');"> Course </button>
+				            </td>
+
+				        </tr>
+				        <tr>
+				            <td>
+					        	<strong> Ch10ex -  </strong> FragmentsManager 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter10ex_FragmentManager.pdf');"> Course </button>
+				            </td>
+
+				        </tr>
+				        <tr>
+				            <td>
+					        	<strong> Ch11 -  </strong> Async Tasks 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter11_AsyncTask.pdf');"> Course </button>
+				            </td>
+
+				        </tr>
+				        <tr>
+				            <td>
+					        	<strong> Ch12 -  </strong> Broadcast Receiver 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter12_Broadcast_Receiver.pdf');"> Course </button>
+				            </td>
+
+				        </tr>
+				        <tr>
+				            <td>
+					        	<strong> Ch12ex -  </strong> Wifi 
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3350/Courses/Chapter12ex_Broadcast_Receiver_Wifi.pdf');"> Course </button>
+				            </td>
+
+				        </tr>
 					</table>
 					<br>
 				</div>

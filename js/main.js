@@ -141,14 +141,30 @@ function refresh(course){
 	  	}
 	}
 
-	if(course != 'i3306'){
+	if(course==='i3306'){
+	  	if (document.getElementById('i3306.1').checked){
+			document.getElementById('i3306summary').innerHTML = "Download course (1530 KB)";
+		}
+		else{
+			document.getElementById('i3306summary').innerHTML = "Download course (0 KB)";
+		}
+	}
+	else if(course==='i3350'){
+
+		courseSet = [613,2571,2174,2725,963,900,682,910,551,1056,1760,208,305,887,322,76];
+		for(i = 1 ; i < 17 ; i++){	
+			if (document.getElementById(course+'.'+i).checked){	
+		  		courseSize += courseSet[i-1];
+	  		}
+	  	}
+		document.getElementById(course+'full').innerHTML = "Download ("+courseSize+"KB)";
+
+	}
+	else {
 		document.getElementById(course+'course').innerHTML = "Download course ("+courseSize+"KB)";
 		document.getElementById(course+'summary').innerHTML = "Download summary ("+sumSize+"KB)";
 		both = courseSize + sumSize;
 		document.getElementById(course+'both').innerHTML = "Download both ("+both+"KB)";
-	}
-	else{
-		document.getElementById('i3306summary').innerHTML = "Download course (1530 KB)";
 	}
 }
 
@@ -312,6 +328,32 @@ function downloadnew(course, status){
 		}
 	}
 
+	else if(course==='i3350'){//Mobile
+
+		courseSet = ['data/I3350/Courses/Chapter0_Java_Revision.pdf',
+		'data/I3350/Courses/Chapter1_Introduction.pdf',
+		'data/I3350/Courses/Chapter2_Gui_Widgets_list.pdf',
+		'data/I3350/Courses/Chapter3_Layout.pdf',
+		'data/I3350/Courses/Chapter4_Intents.pdf',
+		'data/I3350/Courses/Chapter5_Activity_LifeCycle.pdf',
+		'data/I3350/Courses/Chapter6_Shared_Preferences.pdf',
+		'data/I3350/Courses/Chapter7_Files_Storage.pdf',
+		'data/I3350/Courses/Chapter8_Notifications.pdf',
+		'data/I3350/Courses/Chapter9_SQLITE.pdf',
+		'data/I3350/Courses/Chapter10_Fragments.pdf',
+		'data/I3350/Courses/Chapter10ex_FragmentManager.pdf',
+		'data/I3350/Courses/Chapter11_AsyncTask.pdf',
+		'data/I3350/Courses/Chapter12_Broadcast_Receiver.pdf',
+		'data/I3350/Courses/Chapter12ex_Broadcast_Receiver_Wifi.pdf',
+		'data/I3350/Summaries/I3350_Summary.docx'];
+
+		for(i = 1 ; i < 17 ; i++){
+		  	if (document.getElementById(course+'.'+i).checked){
+		  		zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
+			}
+		}
+
+	}
 
 
   	if(status == 0){
