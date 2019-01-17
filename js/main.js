@@ -232,19 +232,19 @@ function downloadnew(course, status){
 		  		if(i==4 || i ==5){
 		  			if(ch4flag==0){
 		  				ch4flag = 1;
-						zip.folder("Summaries").file(sumSet[4].split("/")[3], urlToPromise('data/I3301/Summaries/ch4.docx'), {binary:true});
+						zip.folder("Summaries").file(sumSet[3].split("/")[3], urlToPromise('data/I3301/Summaries/ch4.docx'), {binary:true});
 	 	 			}
 		  		}
 		  		if(i==5 || i ==6){
 		  			if(gitFlag==0){
 		  				gitFlag = 1;
-						zip.folder("Summaries").file(sumSet[4].split("/")[3], urlToPromise('data/I3301/Summaries/git.docx'), {binary:true});
+						zip.folder("Summaries").file(sumSet[5].split("/")[3], urlToPromise('data/I3301/Summaries/git.docx'), {binary:true});
 	 	 			}
 		  		}
-		  		else if(i==9 || i ==10 || i==11 || i==12){
+		  		else if(i==9 || i ==10 || i==11){
 		  			if(uml3Flag==0){
 		  				uml3Flag = 1;
-						zip.folder("Summaries").file(sumSet[8].split("/")[3], urlToPromise('data/I3301/Summaries/uml3.pptx'), {binary:true});
+						zip.folder("Summaries").file(sumSet[9].split("/")[3], urlToPromise('data/I3301/Summaries/uml3.pptx'), {binary:true});
 		  			}
 		  		}
 		  		else{
