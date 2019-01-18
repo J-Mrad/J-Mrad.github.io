@@ -86,6 +86,33 @@ function refresh(course){
 	  		}
 	  	}
   	}
+
+  	else if(course==='i3302'){
+		courseSet = [1194,667,1014,1068,1744,781];
+		sumSet = [773,1384,1191,592,611,1427];
+
+		for(i = 1 ; i < 7 ; i++){	
+		  	if (document.getElementById(course+'.'+i).checked){
+		  		
+				sumSize += sumSet[i-1];
+				courseSize += courseSet[i-1];
+		  		
+	  		}
+	  	}
+  	}
+
+  	  	else if(course==='i3303'){
+		sumSet = [3794,3791];
+
+		for(i = 1 ; i < 3 ; i++){	
+		  	if (document.getElementById(course+'.'+i).checked){
+
+				sumSize += sumSet[i-1];
+		  		
+	  		}
+	  	}
+  	}
+
   	else if(course==='i3304'){
 		courseSet = [1576,1423,2755,2301,1252];
 
@@ -252,6 +279,46 @@ function downloadnew(course, status){
 		  		}
 
 				zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
+
+	  		}
+	  	}
+	}
+
+	else if(course==='i3302'){ //PHP
+
+			courseSet = ['data/I3302/Courses/Ch1_Introduction.pdf',
+			'data/I3302/Courses/Ch2_PHP_Syntax.pdf',
+			'data/I3302/Courses/Ch3_Forms_Files.pdf',
+			'data/I3302/Courses/Ch4_Sessions_Cookies.pdf',
+			'data/I3302/Courses/Ch5_MySQL.pdf',
+			'data/I3302/Courses/Ch6_REGEX.pdf'];
+			sumSet = ['data/I3302/Summaries/Ch1_Introduction_Summary.pdf',
+			'data/I3302/Summaries/Ch2_PHP_Syntax_Summary.pdf',
+			'data/I3302/Summaries/Ch3_Forms_Files_Summary.pdf',
+			'data/I3302/Summaries/Ch4_Sessions_Cookies_Summary.pdf',
+			'data/I3302/Summaries/Ch5_MySQL_Summary.pdf',
+			'data/I3302/Summaries/Ch6_REGEX_Summary.pdf'];
+			
+
+    	for(i = 1 ; i < 7 ; i++){	
+		  	if (document.getElementById(course+'.'+i).checked){
+		  		
+			  	zip.folder("Summaries").file(sumSet[i-1].split("/")[3], urlToPromise(sumSet[i-1]), {binary:true});
+				zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
+
+	  		}
+	  	}
+	}
+
+	else if(course==='i3303'){ //PHP
+
+			sumSet = ['data/I3303/Summaries/Ch1_Processes.pdf',
+			'data/I3303/Summaries/Ch2_Memory_Management.pdf'];
+
+    	for(i = 1 ; i < 3 ; i++){	
+		  	if (document.getElementById(course+'.'+i).checked){
+		  		
+			  	zip.folder("Summaries").file(sumSet[i-1].split("/")[3], urlToPromise(sumSet[i-1]), {binary:true});
 
 	  		}
 	  	}

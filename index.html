@@ -77,7 +77,11 @@
 
 		<div class = "row bgWhite">
 			<div class="col-12 text-center">
+				<p style="text-align: left;" class="padded-low">
+				For any broken links or missing files please file an issue <a href = "https://github.com/J-Mrad/J-Mrad.github.io/issues"> here </a>
+				<h3> Disclaimer </h3>
 				The data provided on this site is designed to provide helpful information on the subjects listed. This site is not meant to be used, nor should be used, as a substitute to attending classes. For academic years after 2018-2019 it is recommended that you consult your professor(s) before studying the provided courses. The developer is not responsible for any information later deemed false or inaccurate and is not liable for any negative consequences caused by the use of the site. Users should be aware that courses are subject to change between academic years.
+				</p>
 			</div>
 		</div>		
 
@@ -88,12 +92,17 @@
 				<div class = "col-sm-12 col-lg-4 bgBlue"> 
 					<img src="images/Skills.png" class="padded-up icon-md-single">
 					<h1 class="text-center"> 3rd Year Summaries </h1>
+
+					<h4 class = "text-center"> Course List </h4>
+					<a href="https://i.gyazo.com/5fbe5c68490d93e66aa99dd735989549.png" target="_blank">
+					<img src="https://i.gyazo.com/5fbe5c68490d93e66aa99dd735989549.png" clas="icon-md">
+					</a>
 					<h6 class="text-center text-white"> */**: Courses share the same summary file </h6>
+					<h3 class="text-center"> Choose download mode: </h3>
 				</div>
 				<div class = "col-sm-12 col-lg-4 bgBlue"> 
 				</div>
 		</div>
-
 		<div class="row bgBlue">
 			<label class="switch-light margins-center padded-up" onclick="toggleRows()">
 				<input type="checkbox">
@@ -213,10 +222,55 @@
 					<h2 class="text-center">[I3302]</h2>
 					<h5 class="text-center">PHP</h5>
 					<br>
-					<s><button class="CustomButton1 margins-center"> Download Course </button>
-					<button class="CustomButton1 margins-center"> Download Summary </button>
-					<button class="CustomButton1 margins-center"> Download Full </button>
-					</s><br>
+					<ul style="font-size:14px">
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3302checkAll" onclick="toggleAll('i3302',6);"/>
+				                <strong> Select All </strong>
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3302.1" onclick="refresh('i3302');"/>
+				                <strong>Ch1 -  </strong> Introduction
+				            </label>
+				        </li>
+					        <li>
+				            <label>
+				                <input type="checkbox" id="i3302.2" onclick="refresh('i3302');"/>
+				                <strong>Ch2 -  </strong> PHP Syntax
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3302.3" onclick="refresh('i3302');"/>
+				                <strong>Ch3 -  </strong> Forms & Files
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3302.4" onclick="refresh('i3302');"/>
+				                <strong>Ch4 - </strong>  Sessions & Cookies
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3302.5" onclick="refresh('i3302');"/>
+				                <strong>Ch5 - </strong>  MySQL
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3302.6" onclick="refresh('i3302');"/>
+				                <strong>Ch6 - </strong>  Regular Expression
+				            </label>
+				        </li>
+				    </ul>
+
+					<button class="CustomButton1 margins-center" id = 'i3302course' onClick = downloadnew('i3302',0)> Download Course (0KB) </button> 
+					<button class="CustomButton1 margins-center" id = 'i3302summary' onClick = downloadnew('i3302',1)> Download Summary (0KB) </button>
+					<button class="CustomButton1 margins-center" id = 'i3302both' onClick = downloadnew('i3302',2)> Download Both (0KB) </button>
+					<br>
 				</div>
 
 				<!-- I3303 -->
@@ -225,10 +279,39 @@
 					<h2 class="text-center">[I3303]</h2>
 					<h5 class="text-center">Operating Systems 2</h5>
 					<br>
-					<s><button class="CustomButton1 margins-center"> Download Course </button>
-					<button class="CustomButton1 margins-center"> Download Summary </button>
-					<button class="CustomButton1 margins-center"> Download Full </button>
-					</s><br>
+					<ul style="font-size:14px">
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3303checkAll" onclick="toggleAll('i3303',2);"/>
+				                <strong> Select All </strong>
+				            </label>
+				        </li>
+				        <li>
+				            <label>
+				                <input type="checkbox" id="i3303.1" onclick="refresh('i3303');"/>
+				                <strong>Ch1 -  </strong> Processes
+				            </label>
+				        </li>
+					        <li>
+				            <label>
+				                <input type="checkbox" id="i3303.2" onclick="refresh('i3303');"/>
+				                <strong>Ch2 -  </strong> Memory Management
+				            </label>
+				        </li>
+				        </li>
+					        <li>
+				            <label>
+				                <input type="checkbox" id="i3303.3" onclick="refresh('i3303');"/>
+				                <strong>Ch3 -  </strong> File Systems(NOT AVAILABLE)
+				            </label>
+				        </li>
+
+				    </ul>
+
+					<button style="display: none" id = 'i3303course' onClick = downloadnew('i3303',0)> Download Course (0KB) </button> 
+					<button class="CustomButton1 margins-center" id = 'i3303summary' onClick = downloadnew('i3303',1)> Download Summary (0KB) </button>
+					<button style="display: none" id = 'i3303both' onClick = downloadnew('i3303',2)> Download Both (0KB) </button>
+					<br>
 				</div>
 
 				<!-- I3304 -->
@@ -671,16 +754,70 @@
 					<Table border=1 style="font-size:14px;" class="margins-center-noblock">
 				        <tr>
 				            <td>
-				                <s><strong>Ch1 -  </strong> Placeholder </s>
+				                <strong>Ch1 -  </strong> Introduction
 				            </td>
 				            <td>
-        						<button class="CustomButton2 margins-center" onclick="download();"> Course </button>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3302/Courses/Ch1_Introduction.pdf');"> Course </button>
 				            </td>
 				            <td>
-        						<button class="CustomButton2 margins-center" onclick="download();"> Summary </button>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3302/Summaries/Ch1_Introduction_Summary.pdf');"> Summary </button>
 				            </td>
 				        </tr>
-
+				        <tr>
+				            <td>
+				                <strong>Ch2 -  </strong> PPHP Syntax
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3302/Courses/Ch2_PHP_Syntax.pdf');"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3302/Summaries/Ch2_PHP_Syntax_Summary.pdf');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch3 -  </strong> Forms & Files
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3302/Courses/Ch3_Forms_Files.pdf');"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3302/Summaries/Ch3_Forms_Files_Summary.pdf');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch4 -  </strong> Sessions & Cookies
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3302/Courses/Ch4_Sessions_Cookies.pdf');"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3302/Summaries/Ch4_Sessions_Cookies_Summary.pdf');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch5 -  </strong> MySQL
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3302/Courses/Ch5_MySQL.pdf');"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3302/Summaries/Ch5_MySQL_Summary.pdf');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch6 -  </strong> Regular Expressions
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3302/Courses/Ch6_REGEX.pdf');"> Course </button>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3302/Summaries/Ch6_REGEX_Summary.pdf');"> Summary </button>
+				            </td>
+				        </tr>
 					</table>
 					<br>
 				</div>
@@ -693,13 +830,22 @@
 					<Table border=1 style="font-size:14px;" class="margins-center-noblock">
 				        <tr>
 				            <td>
-				                <s><strong>Ch1 -  </strong> Placeholder </s>
+				                <strong>Ch1 -  </strong> Processes
 				            </td>
 				            <td>
-        						<button class="CustomButton2 margins-center" onclick="download();"> Course </button>
 				            </td>
 				            <td>
-        						<button class="CustomButton2 margins-center" onclick="download();"> Summary </button>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3303/Summaries/Ch1_Processes.pdf');"> Summary </button>
+				            </td>
+				        </tr>
+				        <tr>
+				            <td>
+				                <strong>Ch2 -  </strong> Memory Management
+				            </td>
+				            <td>
+				            </td>
+				            <td>
+        						<button class="CustomButton2 margins-center" onclick="download('data/I3303/Summaries/Ch2_Memory_Management.pdf');"> Summary </button>
 				            </td>
 				        </tr>
 
