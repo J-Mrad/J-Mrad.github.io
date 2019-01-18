@@ -367,21 +367,29 @@ function downloadnew(course, status){
 		'data/I3305/Courses/Ch5_JDBC.pdf'];
 		sumSet=[
 		'data/I3305/Summaries/Ch1.jpg',
-		'data/I3305/Summaries/Ch1&2.jpg',
+		'data/I3305/Summaries/Ch2&3.jpg',
 		null,
 		'data/I3305/Summaries/Ch4_JavaFx.docx',
+		null,
 		'data/I3305/Summaries/Ch5_JDBC.docx'];
 
-		sumFlag = 0;	
+		sumFlag1 = 0;
+		sumFlag2 = 0;	
     	for(i = 1 ; i < 7 ; i++){
 		  	if (document.getElementById(course+'.'+i).checked){
 		  		if(i==2 || i==3){
-		  			if(sumFlag == 0){
-		  				sumFlag = 1;
+		  			if(sumFlag1 == 0){
+		  				sumFlag1 = 1;
 		  				zip.folder("Summaries").file(sumSet[1].split("/")[3], urlToPromise(sumSet[1]), {binary:true});
 	  				}
 		  		}
-				else{zip.folder("Summaries").file("i3304_"+i+".jpg", urlToPromise(sumSet[i-1]), {binary:true});}
+		  		if(i==4 || i==5){
+		  			if(sumFlag2 == 0){
+		  				sumFlag2 = 1;
+		  				zip.folder("Summaries").file(sumSet[3].split("/")[3], urlToPromise(sumSet[3]), {binary:true});
+	  				}
+		  		}
+				else{zip.folder("Summaries").file(sumSet[i-1].split("/")[3], urlToPromise(sumSet[i-1]), {binary:true});}
 		  		zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
 			}
 		}
