@@ -383,7 +383,7 @@ function downloadnew(course, status){
 		  				zip.folder("Summaries").file(sumSet[1].split("/")[3], urlToPromise(sumSet[1]), {binary:true});
 	  				}
 		  		}
-		  		if(i==4 || i==5){
+		  		else if(i==4 || i==5){
 		  			if(sumFlag2 == 0){
 		  				sumFlag2 = 1;
 		  				zip.folder("Summaries").file(sumSet[3].split("/")[3], urlToPromise(sumSet[3]), {binary:true});
