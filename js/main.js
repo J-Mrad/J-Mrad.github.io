@@ -102,9 +102,9 @@ function refresh(course){
   	}
 
   	  	else if(course==='i3303'){
-		sumSet = [3794,3791];
+		sumSet = [3794,3791,1233];
 
-		for(i = 1 ; i < 3 ; i++){	
+		for(i = 1 ; i < 4 ; i++){	
 		  	if (document.getElementById(course+'.'+i).checked){
 
 				sumSize += sumSet[i-1];
@@ -310,12 +310,13 @@ function downloadnew(course, status){
 	  	}
 	}
 
-	else if(course==='i3303'){ //PHP
+	else if(course==='i3303'){ //OS2
 
 			sumSet = ['data/I3303/Summaries/Ch1_Processes.pdf',
-			'data/I3303/Summaries/Ch2_Memory_Management.pdf'];
+			'data/I3303/Summaries/Ch2_Memory_Management.pdf',
+			'data/I3303/Summaries/Ch3_File_Systems.pdf'];
 
-    	for(i = 1 ; i < 3 ; i++){	
+    	for(i = 1 ; i < 4 ; i++){	
 		  	if (document.getElementById(course+'.'+i).checked){
 		  		
 			  	zip.folder("Summaries").file(sumSet[i-1].split("/")[3], urlToPromise(sumSet[i-1]), {binary:true});
