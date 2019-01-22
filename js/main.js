@@ -507,7 +507,7 @@ function downloadnew(course, status){
 	}
 
 
-	updateHits(fileCount,document.getElementById(course+'both').innerHTML.split('(')[1].split('K')[0]*1024);
+	updateHits(fileCount,document.getElementById(course+'both').innerHTML.split('(')[1].split('K')[0]);
 
 
   	if(status == 0){
