@@ -1,3 +1,57 @@
+
+//Hit counts:
+globalFiles = 0;
+globalData = 0;
+
+readHits();
+
+function readHits(){
+
+	let req = new XMLHttpRequest();
+
+	req.onreadystatechange = () => {
+	  if (req.readyState == XMLHttpRequest.DONE) {
+	  	text = req.responseText;
+	    //console.log(req.responseText);
+	    globalFiles = text.split('{')[1].split(':')[1].split(',')[0];
+	    globalData = text.split('{')[1].split(':')[2].split('}')[0];
+	    document.getElementById("files").innerHTML = globalFiles;
+	    document.getElementById("data").innerHTML = globalData + "B";
+
+	  }
+	};
+
+	req.open("GET", "https://api.jsonbin.io/b/5c477cdf6dbfe317d4c21d36/3", true);
+	req.setRequestHeader("secret-key","$2a$10$W0GxYj5sgyVtCb/tskrHK.idEE3UxlyQlUZGq71Wlz2HFYY9JEfre");
+	req.setRequestHeader("version","3");
+	req.send();
+
+}
+
+
+function updateHits(files, data){
+
+	files = +files + +globalFiles;
+	data = +data + +globalData;
+
+	let req = new XMLHttpRequest();
+
+	req.onreadystatechange = () => {
+	  if (req.readyState == XMLHttpRequest.DONE) {
+	    //console.log(req.responseText);
+	  }
+	};
+
+	req.open("PUT", "https://api.jsonbin.io/b/5c477cdf6dbfe317d4c21d36", true);
+	req.setRequestHeader("Content-type", "application/json");
+	req.setRequestHeader("secret-key","$2a$10$W0GxYj5sgyVtCb/tskrHK.idEE3UxlyQlUZGq71Wlz2HFYY9JEfre");
+	req.setRequestHeader("versioning","false");
+	req.send('{"files":'+files+',"data":'+data+'}');
+}
+
+
+
+
 //Header:
 
 var HeaderBG = 1; // 1 = not blinking image, 2 = blinking
@@ -16,8 +70,9 @@ function BGSwitcher(){
 
 //Buttons:
 
-function download(file){
+function download(file, dataSize){
 	window.open(file, "Download");
+	updateHits(1,dataSize);
 }
 
 
@@ -224,6 +279,7 @@ function downloadnew(course, status){
 
     var zip = new JSZip();
 
+    fileCount = 0;
 
     if(course==='i3301'){ //Software Engineering
 
@@ -260,25 +316,30 @@ function downloadnew(course, status){
 		  			if(ch4flag==0){
 		  				ch4flag = 1;
 						zip.folder("Summaries").file(sumSet[3].split("/")[3], urlToPromise('data/I3301/Summaries/ch4.docx'), {binary:true});
+						fileCount++;
 	 	 			}
 		  		}
 		  		if(i==5 || i ==6){
 		  			if(gitFlag==0){
 		  				gitFlag = 1;
 						zip.folder("Summaries").file(sumSet[5].split("/")[3], urlToPromise('data/I3301/Summaries/git.docx'), {binary:true});
+						fileCount++;
 	 	 			}
 		  		}
 		  		else if(i==9 || i ==10 || i==11){
 		  			if(uml3Flag==0){
 		  				uml3Flag = 1;
 						zip.folder("Summaries").file(sumSet[9].split("/")[3], urlToPromise('data/I3301/Summaries/uml3.pptx'), {binary:true});
+						fileCount++;
 		  			}
 		  		}
 		  		else{
 			  		zip.folder("Summaries").file(sumSet[i-1].split("/")[3], urlToPromise(sumSet[i-1]), {binary:true});
+			  		fileCount++;
 		  		}
 
 				zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
+				fileCount++;
 
 	  		}
 	  	}
@@ -304,7 +365,9 @@ function downloadnew(course, status){
 		  	if (document.getElementById(course+'.'+i).checked){
 		  		
 			  	zip.folder("Summaries").file(sumSet[i-1].split("/")[3], urlToPromise(sumSet[i-1]), {binary:true});
+			  	fileCount++;
 				zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
+				fileCount++;
 
 	  		}
 	  	}
@@ -320,6 +383,7 @@ function downloadnew(course, status){
 		  	if (document.getElementById(course+'.'+i).checked){
 		  		
 			  	zip.folder("Summaries").file(sumSet[i-1].split("/")[3], urlToPromise(sumSet[i-1]), {binary:true});
+			  	fileCount++;
 
 	  		}
 	  	}
@@ -336,10 +400,12 @@ function downloadnew(course, status){
     	for(i = 1 ; i < 6 ; i++){
 		  	if (document.getElementById(course+'.'+i).checked){
 		  		zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
+		  		fileCount++;
 			}
 		}
 		for(i=1 ; i < 10 ; i++){
 			zip.folder("Summaries").file("i3304_"+i+".jpg", urlToPromise("data/I3304/Summaries/p"+i+".jpg"), {binary:true});
+			fileCount++;
 		}
 
 		courseSet = ['data/I3304LAB/Courses/Ch1_Static_Routing.pdf',
@@ -351,10 +417,12 @@ function downloadnew(course, status){
     	for(i = 1 ; i < 6 ; i++){
 		  	if (document.getElementById(course+'.'+i).checked){
 		  		zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
+		  		fileCount++;
 			}
 		}
 		for(i=1 ; i < 10 ; i++){
 			zip.folder("Summaries").file("i3304_LAB.jpg", urlToPromise("data/I3304LAB/Summaries/I3304_LAB_Summary.docx"), {binary:true});
+			fileCount++;
 		}
 	}
 
@@ -382,16 +450,20 @@ function downloadnew(course, status){
 		  			if(sumFlag1 == 0){
 		  				sumFlag1 = 1;
 		  				zip.folder("Summaries").file(sumSet[1].split("/")[3], urlToPromise(sumSet[1]), {binary:true});
+		  				fileCount++;
 	  				}
 		  		}
 		  		else if(i==4 || i==5){
 		  			if(sumFlag2 == 0){
 		  				sumFlag2 = 1;
 		  				zip.folder("Summaries").file(sumSet[3].split("/")[3], urlToPromise(sumSet[3]), {binary:true});
+		  				fileCount++;
 	  				}
 		  		}
 				else{zip.folder("Summaries").file(sumSet[i-1].split("/")[3], urlToPromise(sumSet[i-1]), {binary:true});}
+				fileCount++;
 		  		zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
+		  		fileCount++;
 			}
 		}
 	}
@@ -400,7 +472,9 @@ function downloadnew(course, status){
 
 	  	if (document.getElementById('i3306.1').checked){
 			zip.file("i3306_1.jpg", urlToPromise('data/I3306/p1.jpg'), {binary:true});
+			fileCount++;
 			zip.file("i3306_2.jpg", urlToPromise('data/I3306/p2.jpg'), {binary:true});
+			fileCount++;
 		}
 	}
 
@@ -426,10 +500,14 @@ function downloadnew(course, status){
 		for(i = 1 ; i < 17 ; i++){
 		  	if (document.getElementById(course+'.'+i).checked){
 		  		zip.folder("Courses").file(courseSet[i-1].split("/")[3], urlToPromise(courseSet[i-1]), {binary:true});
+		  		fileCount++;
 			}
 		}
 
 	}
+
+
+	updateHits(fileCount,document.getElementById(course+'both').innerHTML.split('(')[1].split('K')[0]*1024);
 
 
   	if(status == 0){
@@ -444,7 +522,7 @@ function downloadnew(course, status){
 		// see FileSaver.js
  		saveAs(content, course+".zip");
 	});
- 	
+
 	alert("Selected file(s) will be zipped and downloaded. Bad internet connection might cause delays.");
 
 }
