@@ -506,15 +506,16 @@ function downloadnew(course, status){
 
 	}
 
-
-	updateHits(fileCount,document.getElementById(course+'both').innerHTML.split('(')[1].split('K')[0]);
-
-
   	if(status == 0){
   		zip.remove("Summaries");
+		updateHits(fileCount,document.getElementById(course+'course').innerHTML.split('(')[1].split('K')[0]);
   	}
   	else if(status == 1){
   		zip.remove("Courses");
+  		updateHits(fileCount,document.getElementById(course+'summary').innerHTML.split('(')[1].split('K')[0]);
+  	}
+  	else{
+  		updateHits(fileCount,document.getElementById(course+'both').innerHTML.split('(')[1].split('K')[0]);
   	}
 
   	zip.generateAsync({type:"blob"})
