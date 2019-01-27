@@ -81,6 +81,10 @@ $().ready(function(){
 });
 slide = 0;
 function toggleRows() {
+	document.getElementById('blinking_text').classList.remove('blink');
+	document.getElementById('switch').classList.remove('blink');
+	document.getElementById('blinking_text').classList.remove('text_red');
+
 	if(slide==1){
 	    $(".zipHolder").toggle();
 	    $('.standardHolder').toggle();

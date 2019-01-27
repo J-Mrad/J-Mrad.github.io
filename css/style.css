@@ -157,6 +157,10 @@ img{
 	color:#FFFFFF;
 }
 
+.text-red{
+	color:red;
+}
+
 
 /* Backgrounds */
 
@@ -331,4 +335,16 @@ img{
 	.CustomButton1{
 		max-width: 80%;
 	}
+}
+
+/* Animations */
+
+.blink {
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
