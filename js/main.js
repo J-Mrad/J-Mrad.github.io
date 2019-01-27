@@ -239,7 +239,7 @@ function refresh(course){
 		  		courseSize += courseSet[i-1];
 	  		}
 	  	}
-		document.getElementById(course+'full').innerHTML = "Download ("+courseSize+"KB)";
+		document.getElementById(course+'both').innerHTML = "Download ("+courseSize+"KB)";
 
 	}
 	else {
