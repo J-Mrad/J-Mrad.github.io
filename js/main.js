@@ -120,13 +120,20 @@ function refresh(course){
 		courseSet = [725,771,242,2330,720,159,690,1662,443,327,274,307,601];
 		sumSet = [25,554,83,109,0,18,0,314,72,222,0,0,85];
 		
+		ch4flag = 0;
 		gitFlag = 0;
 		uml3Flag=0;
-
+		
 		for(i = 1 ; i < 14 ; i++){	
 		  	if (document.getElementById(course+'.'+i).checked){
 		  		
-		  		if(i==5 || i ==6){
+		  		if(i==4 || i ==5){
+		  			if(ch4flag==0){
+		  				ch4flag = 1;
+		  				sumSize += 109;
+		  			}
+		  		}
+		  		if(i==6 || i ==7){
 		  			if(gitFlag==0){
 		  				gitFlag = 1;
 		  				sumSize += 18;
@@ -323,14 +330,14 @@ function downloadnew(course, status){
 						fileCount++;
 	 	 			}
 		  		}
-		  		if(i==5 || i ==6){
+		  		if(i==6 || i ==7){
 		  			if(gitFlag==0){
 		  				gitFlag = 1;
 						zip.folder("Summaries").file(sumSet[5].split("/")[3], urlToPromise('data/I3301/Summaries/git.docx'), {binary:true});
 						fileCount++;
 	 	 			}
 		  		}
-		  		else if(i==9 || i ==10 || i==11){
+		  		else if(i==10 || i ==11 || i==12){
 		  			if(uml3Flag==0){
 		  				uml3Flag = 1;
 						zip.folder("Summaries").file(sumSet[9].split("/")[3], urlToPromise('data/I3301/Summaries/uml3.pptx'), {binary:true});
