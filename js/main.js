@@ -330,7 +330,7 @@ function downloadnew(course, status){
 						fileCount++;
 	 	 			}
 		  		}
-		  		if(i==6 || i ==7){
+		  		else if(i==6 || i ==7){
 		  			if(gitFlag==0){
 		  				gitFlag = 1;
 						zip.folder("Summaries").file(sumSet[5].split("/")[3], urlToPromise('data/I3301/Summaries/git.docx'), {binary:true});
@@ -340,7 +340,7 @@ function downloadnew(course, status){
 		  		else if(i==10 || i ==11 || i==12){
 		  			if(uml3Flag==0){
 		  				uml3Flag = 1;
-						zip.folder("Summaries").file(sumSet[9].split("/")[3], urlToPromise('data/I3301/Summaries/uml3.pptx'), {binary:true});
+						zip.folder("Summaries").file(sumSet[9].split("/")[3], urlToPromise('data/I3301/Summaries/uml3.docx'), {binary:true});
 						fileCount++;
 		  			}
 		  		}
