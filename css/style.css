@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Alegreya+Sans');/*nav*/
 @import url('https://fonts.googleapis.com/css?family=Alegreya'); /*Standard Text*/
 @import url('https://fonts.googleapis.com/css?family=Oswald'); /*Titles*/
-@import "https://fonts.googleapis.com/css?family=Raleway"; /*Forum */
+@import "https://fonts.googleapis.com/css?family=Raleway"; /*Standard Text Main */
 /*
 	Color Scheme: https://www.colorcombos.com/color-schemes/141/ColorCombo141.html
 	
@@ -38,6 +38,7 @@ body{
 	background-color:#0F1526;
 	overflow-x: hidden;
 }
+
 .fixflow{
 	overflow-x: hidden;
 }
@@ -170,15 +171,17 @@ img{
 .bgWhite{
 	background-color:#EEEEEE;
 }
+
 .bgLightGray{
-	background-color:#DBDBCE;
+	background-color:#101010;
 }
 .bgMidGray{
-	background-color:#989898;
+	background-color:#202020;
 }
 .bgDarkGray{
-	background-color:#565656;
+	background-color:#303030;
 }
+
 .bgBlue{
 	background-color:#618AFE;
 }
@@ -219,7 +222,8 @@ img{
 	opacity: 1;
 }
 .nav-link , .navbar-brand{ 
-	color: #f4f4f4; cursor: pointer;
+	color: #f4f4f4; 
+	cursor: pointer;
 }
 .nav-link{
 	margin-right: 1em;
@@ -229,7 +233,7 @@ img{
 }
 .nav-link:hover{
 	background: #E1E1D6;
-	color: #00C5FF;
+	color: #000000;
 }
 .navbar-collapse{
 	justify-content: flex-end;
@@ -318,26 +322,43 @@ img{
 /* Buttons */
 
 .CustomButton1{
-	background-color: #618AFE;
+	color: white;
+	background-color: #000000;
 	transition: 1s all ease;
 }
 
 .CustomButton1:hover{
+	color: black;
 	background-color: #FFFFFF;
 	transform: scale(1.5);
 	box-shadow: 0px 1px 0px 0px;
 }
 
-.CustomButton2{
-	background-color: #618AFE;
+.CustomButton2{	
+	color: white;
+	background-color: #000000;
 	transition: 1s all ease;
 	padding: 5px 5px;
 }
 
 .CustomButton2:hover{
+	color: black;
 	background-color: #FFFFFF;
 	transform: scale(0.9);
 	box-shadow: 0px 1px 0px 0px;
+}
+
+.border_black_hv{
+  border: solid 5px @border;
+  transition: border-width 0.6s linear;
+}
+
+.border_black_hv:hover { border-width: 10px; }
+
+.btn{
+	color: white;
+	background: black;
+	border: red;
 }
 
 @media only screen and (max-width: 763px){
@@ -356,4 +377,21 @@ img{
   50% {
     opacity: 0;
   }
+}
+
+/* Fonts */
+.font_raleway{
+	font-family: Raleway;
+}
+.font_oswald{
+	font-family: Oswald;
+}
+.font_alegreya{
+	font-family: Alegreya;
+}
+.font_alegreya_s{
+	font-family: 'Alegreya Sans';
+}
+.justify{
+	  text-justify: inter-word;
 }

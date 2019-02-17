@@ -58,6 +58,12 @@ function download(file, dataSize){
 	updateHits(1,dataSize);
 }
 
+function forceDownload(file, dataSize) {
+    window.location.href = file;
+    updateHits(1,dataSize);
+
+}
+
 
 $().ready(function(){
    $('.zipHolder').hide();
