@@ -16,7 +16,7 @@ function readHits(){
 	    globalFiles = text.split('{')[1].split(':')[1].split(',')[0];
 	    globalData = text.split('{')[1].split(':')[2].split('}')[0];
 	    document.getElementById("files").innerHTML = globalFiles;
-	    document.getElementById("data").innerHTML = globalData + "KB";
+	    document.getElementById("data").innerHTML = Math.floor(globalData/1024) + "MB (" + globalData + "KB)";
 
 	  }
 	};
