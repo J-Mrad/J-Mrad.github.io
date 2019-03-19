@@ -165,6 +165,12 @@ img{
 	color:#FF0000;
 }
 
+@media only screen and (max-width: 761px){
+
+	.small_on_mobile{
+		font-size: 17px !important;
+	}
+}
 
 /* Backgrounds */
 
@@ -229,7 +235,7 @@ img{
 	margin-right: 1em;
 	border-radius:50px;
 	transition: 1s all;
-	font-size: 1.5em !important;
+	font-size: 1.5em;
 }
 .nav-link:hover{
 	background: #E1E1D6;
