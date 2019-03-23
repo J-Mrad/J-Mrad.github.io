@@ -171,6 +171,9 @@ img{
 .text-neon{
 	color:#7FFFFC;
 }
+.text-gray{
+	color:#AAAAAA;
+}
 
 
 @media only screen and (max-width: 761px){
