@@ -21,9 +21,9 @@ function readHits(){
 	  }
 	};
 
-	req.open("GET", "https://api.jsonbin.io/b/5c477cdf6dbfe317d4c21d36/5", true);
+	req.open("GET", "https://api.jsonbin.io/b/5c477cdf6dbfe317d4c21d36/10", true);
 	req.setRequestHeader("secret-key","$2a$10$W0GxYj5sgyVtCb/tskrHK.idEE3UxlyQlUZGq71Wlz2HFYY9JEfre");
-	req.setRequestHeader("version","5");
+	req.setRequestHeader("version","10");
 	req.send();
 
 }
