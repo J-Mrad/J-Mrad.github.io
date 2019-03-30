@@ -42,11 +42,13 @@ function updateHits(files, data){
 	  }
 	};
 
-	req.open("PUT", "https://api.jsonbin.io/b/5c477cdf6dbfe317d4c21d36", true);
-	req.setRequestHeader("Content-type", "application/json");
-	req.setRequestHeader("secret-key","$2a$10$W0GxYj5sgyVtCb/tskrHK.idEE3UxlyQlUZGq71Wlz2HFYY9JEfre");
-	req.setRequestHeader("versioning","false");
-	req.send('{"files":'+files+',"data":'+data+'}');
+	if(globalData != 0 && globalFiles != 0){
+		req.open("PUT", "https://api.jsonbin.io/b/5c477cdf6dbfe317d4c21d36", true);
+		req.setRequestHeader("Content-type", "application/json");
+		req.setRequestHeader("secret-key","$2a$10$W0GxYj5sgyVtCb/tskrHK.idEE3UxlyQlUZGq71Wlz2HFYY9JEfre");
+		req.setRequestHeader("versioning","false");
+		req.send('{"files":'+files+',"data":'+data+'}');
+	}
 }
 
 
