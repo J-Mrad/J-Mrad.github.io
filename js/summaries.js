@@ -61,7 +61,7 @@ function updateHits(files, data){
 	req2.setRequestHeader("Content-type", "application/json");
 	req2.setRequestHeader("secret-key","$2a$10$W0GxYj5sgyVtCb/tskrHK.idEE3UxlyQlUZGq71Wlz2HFYY9JEfre");
 	req2.setRequestHeader("versioning","true");
-	req2.send('{"dt":'+dateTime+',"files":'+files+'}');
+	req2.send('{"dt":"'+dateTime+'","files":'+files+'}');
 }
 
 
