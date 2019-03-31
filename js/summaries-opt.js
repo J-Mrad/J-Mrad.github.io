@@ -21,9 +21,9 @@ function readHits(){
 	  }
 	};
 
-	req.open("GET", "https://api.jsonbin.io/b/5c477cdf6dbfe317d4c21d36/10", true);
+	req.open("GET", "https://api.jsonbin.io/b/5ca0586c1c56bb1ec392c75c", true);
 	req.setRequestHeader("secret-key","$2a$10$W0GxYj5sgyVtCb/tskrHK.idEE3UxlyQlUZGq71Wlz2HFYY9JEfre");
-	req.setRequestHeader("version","10");
+	//req.setRequestHeader("version","1");
 	req.send();
 
 }
@@ -43,12 +43,26 @@ function updateHits(files, data){
 	};
 
 	if(globalData != 0 && globalFiles != 0){
-		req.open("PUT", "https://api.jsonbin.io/b/5c477cdf6dbfe317d4c21d36", true);
+		req.open("PUT", "https://api.jsonbin.io/b/5ca0586c1c56bb1ec392c75c", true);
 		req.setRequestHeader("Content-type", "application/json");
 		req.setRequestHeader("secret-key","$2a$10$W0GxYj5sgyVtCb/tskrHK.idEE3UxlyQlUZGq71Wlz2HFYY9JEfre");
 		req.setRequestHeader("versioning","false");
 		req.send('{"files":'+files+',"data":'+data+'}');
 	}
+
+	let req2 = new XMLHttpRequest();
+
+	var today = new Date();
+	var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+	var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+	var dateTime = date+' '+time;
+
+	req2.open("PUT", "https://api.jsonbin.io/b/5ca05bb957e7bb33d8a8542c", true);
+	req2.setRequestHeader("Content-type", "application/json");
+	req2.setRequestHeader("secret-key","$2a$10$W0GxYj5sgyVtCb/tskrHK.idEE3UxlyQlUZGq71Wlz2HFYY9JEfre");
+	req2.setRequestHeader("versioning","true");
+	req2.send('{"dt":'+dateTime+',"files":'+files+'}');
+
 }
 
 
