@@ -4,7 +4,9 @@ function Display(string){
 	Alert(string);
 }
 
-
+function downloadCV(){
+	window.open("data/Personal/JadMrad.pdf", "JadMrad_CV");
+}
 
 var HeaderBG = 1; // 1 = not blinking image, 2 = blinking
 function BGSwitcher(){
