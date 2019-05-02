@@ -83,8 +83,8 @@ function forceDownload(file, dataSize) {
 $().ready(function(){
    $('.zipHolder').hide();
    //$('.standardHolder').show();
-
 });
+
 slide = 0;
 function toggleRows() {
 	document.getElementById('blinking_text').classList.remove('blink');

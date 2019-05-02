@@ -1,4 +1,3 @@
-
 //Hit counts:
 globalFiles = 0;
 globalData = 0;
@@ -76,5 +75,57 @@ function download(file, dataSize){
 function forceDownload(file, dataSize) {
     window.location.href = file;
     updateHits(1,dataSize);
+}
+
+function downloadnew(course, status){
+    
+    var zip = new JSZip();
+
+    var fileCount = 0; var dataCount = 0;
+
+	var courses = fs.readdirSync('data/'+course+'/Courses/');
+	var summaries = fs.readdirSync('data/'+course+'/Courses/');
+	var cSizes = courses; var sSizes = summaries;
+
+	for(var i = 0 ; i < courses.length ; i++)
+		cSizes[i] = fileSize('data/'+course+'/Courses/'+courses[i]);
+	for(var i = 0 ; i < summaries.length ; i++)
+		sSizes[i] = fileSize('data/'+course+'/Courses/'+summaries[i]);
+
+	if(status == 1 || status == 0){
+		for(i = 1 ; i < courses.length ; i++){
+		  	if (document.getElementById(course+'.'+i).checked){
+		  		zip.folder("Courses").file(courses[i-1].split("/")[3], urlToPromise(courses[i-1]), {binary:true});
+		  		fileCount++;
+			}
+		}
+		dataCount += parseInt(document.getElementById(course+'course').innerHTML.split('(')[1].split('K')[0]);
+	}
+	
+	else if(status == 2 || status == 0){
+		for(i = 1 ; i < courses.length ; i++){
+		  	if (document.getElementById(course+'.'+i).checked){
+		  		zip.folder("Summaries").file(summaries[i-1].split("/")[3], urlToPromise(summaries[i-1]), {binary:true});
+		  		fileCount++;
+			}
+		}
+		dataCount += parseInt(document.getElementById(course+'summary').innerHTML.split('(')[1].split('K')[0]);
+	}
+
+  	zip.generateAsync({type:"blob"}).then(function(content) {
+ 		saveAs(content, course+".zip");
+	});
+	alert("Selected file(s) will be zipped and downloaded. Bad internet connection might cause delays.");
+
+	updateHits(fileCount,dataCount);
+
+}
+
+//var fs = require('fs');
+function fileSize(filepath)
+{
+    var cmd = 'python -c "import os,sys;print os.path.getsize(sys.argv[1])"';
+    var result = OS.capture(cmd + ' "' + filepath + '"');
+    return parseInt(result);
 }
 
